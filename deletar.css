@@ -1,0 +1,13 @@
+body {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: Raleway;
+    width: full;
+    height: max-content;
+    position: static;
+    background: no-repeat;
+    align-self: flex-end;
+}
