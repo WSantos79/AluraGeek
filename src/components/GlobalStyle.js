@@ -9,9 +9,16 @@ export const GlobalStyle = createGlobalStyle`
   outline: 0;
   box-sizing: border-box;
   
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
 }
 
 body {
-  margin: 32px 0 0 0;
+  
+  
+  
+  margin-top: 32px;
 }
+
 `

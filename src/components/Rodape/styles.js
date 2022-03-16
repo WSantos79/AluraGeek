@@ -1,0 +1,45 @@
+import styled from "styled-components";
+
+export const Rodape = styled.footer`
+display:flex;
+justify-content: center;
+align-items: center;
+
+
+font-weight: 500;
+font-size: 1rem;
+color: #464646;
+
+width: 100%;
+height: 102px;
+
+@media (max-width: 480px) {        
+    font-size: 1em;
+
+    @media (max-width: 480px) {        
+        & > p:first-child  {
+            margin: 0 1rem;
+        }
+        & > a:last-child  {
+            margin: 0 1rem;
+        }
+    }
+       
+ }
+`
+
+export const Span = styled.span`
+    color: red;
+
+`
+
+export const Link = styled.a`
+    margin-left: 10px;
+    
+`
+export const Social = styled.img`
+    width: 35px;
+    &:hover {
+        filter: invert(0.07);
+    }
+`

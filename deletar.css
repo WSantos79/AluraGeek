@@ -10,4 +10,7 @@ body {
     position: static;
     background: no-repeat;
     align-self: flex-end;
+
+    max-width: 176px;
+    max-height: 50px;
 }
