@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Rodape = styled.footer`
+export const Footer = styled.footer`
 display:flex;
 justify-content: center;
 align-items: center;

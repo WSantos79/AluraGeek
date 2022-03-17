@@ -1,19 +1,19 @@
 import BannerPrincipal from "./components/BannerPrincipal";
-import Cabecalho from "./components/Cabecalho";
-import FooterSobreEmpresa from "./components/FooterSobreEmpresa";
+import Header from "./components/Header";
+import SobreEmpresa from "./components/SobreEmpresa";
 import { GlobalStyle } from "./components/GlobalStyle";
-import Rodape from "./components/Rodape";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
     <>
       <GlobalStyle/>
-      <Cabecalho/>
+      <Header/>
       <BannerPrincipal/>
 
-      <FooterSobreEmpresa/>
-      <Rodape/>
+      <SobreEmpresa/>
+      <Footer/>
     </>
   );
 }

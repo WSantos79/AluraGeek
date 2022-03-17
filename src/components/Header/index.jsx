@@ -4,7 +4,7 @@ import search from "../../assets/images/search.svg";
 import styled from "styled-components";
 import { corTextoInput } from "../UI/Variaveis";
 
-export const Container = styled.div`
+export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,13 +69,13 @@ export const Login = styled.a`
 export default () => {
   return (
     <>
-      <Container>
+      <Header>
         <Div>
           <img src={logo} alt="Logo do site Alura Geek"></img>
           <Busca placeholder="O que deseja encontrar?" type="search"></Busca>
         </Div>
         <Login>Login</Login>
-      </Container>
+      </Header>
     </>
   );
 };

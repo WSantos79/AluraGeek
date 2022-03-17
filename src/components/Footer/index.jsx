@@ -1,5 +1,5 @@
 import React from "react";
-import { Rodape, Link, Social, Span } from "./styles";
+import { Footer, Link, Social, Span } from "./styles";
 import GitHub from "../../assets/images/github.svg"
 import Linkedin from "../../assets/images/linkedinDark.svg"
 import Email from "../../assets/images/gmailDark.svg"
@@ -8,7 +8,7 @@ export default () => {
     return (
       <>  
       
-        <Rodape>
+        <Footer>
           <p>©2022 | Desenvolvido com <Span>&#10084;</Span> por Wellington Santos</p>
   
           <Link href="https://www.linkedin.com/in/wellingtonsantos79/" rel="author" target="_blank"><Social src={Linkedin}/></Link>        
@@ -17,7 +17,7 @@ export default () => {
   
           <Link href="mailto:wellingtonsantos7799@gmail.com" rel="author" target="_blank"><Social src={Email}/></Link>
   
-        </Rodape>
+        </Footer>
       </>
     );
   };

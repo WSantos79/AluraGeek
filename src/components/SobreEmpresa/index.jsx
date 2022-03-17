@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.svg";
 import { corTextoInput } from "../UI/Variaveis";
 import { BotaoPrimario } from "../UI";
 
-export const Container = styled.div`
+export const Section = styled.section`
   width: 100%;
   height: 368px;
   margin-top: 4rem;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   background: #eaf2fd;
 `;
-export const Conteudo = styled.div`
+export const Container = styled.div`
   width: 1136px;
   height: 240px;
 
@@ -27,21 +27,17 @@ export const Logo = styled.img`
     max-height: 50px; 
 
 `
-
-export const Nav = styled.ul`   
-
-`;
 export const Item = styled.li`
     font-weight: 500;
     font-size: 1rem;
     margin: 0 0 24px 0;
     list-style-type: none;    
 `;
+
 export const Link = styled.a`
     text-decoration: none;
     color: #464646;
 `
-export const FaleConosco = styled.div``;
 
 export const Fieldset = styled.fieldset`
   border: none;
@@ -92,18 +88,17 @@ export const Mensagem = styled.textarea`
 export default () => {
   return (
     <>
-      <Container>
-        <Conteudo>
+      <Section>
+        <Container>
           <Logo src={logo} alt="Logo do site Alura Geek"></Logo>
-          <Nav>
+          <ul>
             <Item><Link href="#">Quem somos nós</Link></Item>
             <Item><Link href="#">Política de privacidade</Link></Item>
             <Item><Link href="#">Programa fidelidade</Link></Item>
             <Item><Link href="#">Nossas lojas</Link></Item>
             <Item><Link href="#">Quero ser franqueado</Link></Item>
             <Item><Link href="#">Anuncie aqui</Link></Item>
-          </Nav>
-          <FaleConosco>
+          </ul>  
             <form>
               <Fieldset>
                 <legend>Fale conosco</legend>
@@ -114,10 +109,9 @@ export default () => {
                 <Mensagem placeholder="Escreva sua mensagem" required/>
               </Fieldset>
               <BotaoPrimario type="submit">Enviar mensagem</BotaoPrimario>
-            </form>
-          </FaleConosco>
-        </Conteudo>
-      </Container>
+            </form>      
+        </Container>
+      </Section>
     </>
   );
 };
