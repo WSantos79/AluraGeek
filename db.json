@@ -10,31 +10,31 @@
         "id": 2,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
-        "imagem": "../../"
+        "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/two.png?raw=true"
       },
       {
         "id": 3,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
-        "imagem": "../../"
+        "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/three.png?raw=true"
       },
       {
         "id": 4,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
-        "imagem": "../../"
+        "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/four.png?raw=true"
       },
       {
         "id": 5,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
-        "imagem": "../../"
+        "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/five.png?raw=true"
       },
       {
         "id": 6,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
-        "imagem": "../../"
+        "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/six.png?raw=true"
       }
     ]
   }
