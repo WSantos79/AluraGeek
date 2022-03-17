@@ -4,10 +4,34 @@
         "id": 1,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
+        "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/e985f833f50d3f023360e855a7875ce6b05df16b/src/assets/images/starwars/one.svg"
+      },
+      {
+        "id": 2,
+        "nome": "Produto XYZ",
+        "valor": "R$ 60,00",
         "imagem": "../../"
       },
       {
-        "id": 1,
+        "id": 3,
+        "nome": "Produto XYZ",
+        "valor": "R$ 60,00",
+        "imagem": "../../"
+      },
+      {
+        "id": 4,
+        "nome": "Produto XYZ",
+        "valor": "R$ 60,00",
+        "imagem": "../../"
+      },
+      {
+        "id": 5,
+        "nome": "Produto XYZ",
+        "valor": "R$ 60,00",
+        "imagem": "../../"
+      },
+      {
+        "id": 6,
         "nome": "Produto XYZ",
         "valor": "R$ 60,00",
         "imagem": "../../"
