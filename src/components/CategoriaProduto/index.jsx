@@ -42,16 +42,14 @@ export const A = styled.a`
 `;
 
 export const Categoria = styled.div`
-  display: flex;
-  justify-content: space-between;
-  //background: red;
+  display: grid; 
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
 `;
 
 export const Produto = styled.section`
- // margin-right: 1rem; 
- //flex-grow: 2;
- //flex-basis: 30px;
- //flex-shrink: 1;
+
 `;
 
 export const Valor = styled.span`
@@ -71,7 +69,8 @@ export const Ver = styled(A)`
 `;
 
 export const Foto = styled.img`
- 
+  width: 100%;
+  object-fit: cover;
 
 `;
 

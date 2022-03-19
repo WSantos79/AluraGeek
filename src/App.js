@@ -5,7 +5,6 @@ import { GlobalStyle } from "./components/GlobalStyle";
 import Footer from "./components/Footer";
 import CategoriaProduto from "./components/CategoriaProduto";
 
-
 function App() {
   return (
     <>
