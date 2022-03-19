@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import banner from "../../assets/images/banner.png";
 import { BotaoPrimario } from "../UI";
+import { margimPagina } from "../UI/Variaveis";
 
 export const Banner = styled.section`
   background: url(${banner});
-  margin-top: 32px;
+  margin-top: 2rem;
   width: 100%;
   height: 20vw;
   max-height: 22rem;
@@ -13,7 +14,7 @@ export const Banner = styled.section`
   display: flex;
 `;
 export const Conteudo = styled.div`
-    margin: 0 152px;
+    margin: 0 ${margimPagina};
     color: #FFFFFF;
     align-self: flex-end;
     margin-bottom: 2rem;

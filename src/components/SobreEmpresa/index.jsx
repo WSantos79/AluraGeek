@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../../assets/images/logo.svg";
-import { corTextoInput } from "../UI/Variaveis";
+import { corTextoInput, corTextoPrimario } from "../UI/Variaveis";
 import { BotaoPrimario } from "../UI";
+
 
 export const Section = styled.section`
   width: 100%;
@@ -36,7 +37,7 @@ export const Item = styled.li`
 
 export const Link = styled.a`
     text-decoration: none;
-    color: #464646;
+    color: ${corTextoPrimario};
 `
 
 export const Fieldset = styled.fieldset`
@@ -45,7 +46,7 @@ export const Fieldset = styled.fieldset`
 
 export const Nome = styled.input`
   font-size: 1rem;
-  color: #464646;
+  color: ${corTextoPrimario};
   margin: 0.5rem 0 1rem 0;
   display: flex;
   align-items: center;

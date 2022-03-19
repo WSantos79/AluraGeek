@@ -9,7 +9,9 @@ export const GlobalStyle = createGlobalStyle`
   outline: 0;
   box-sizing: border-box;
   
-  font-family: "Raleway";
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+  font-family: 'Raleway', sans-serif;
+
   font-style: normal;
   font-weight: 400;
 }

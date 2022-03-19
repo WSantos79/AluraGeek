@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import SobreEmpresa from "./components/SobreEmpresa";
 import { GlobalStyle } from "./components/GlobalStyle";
 import Footer from "./components/Footer";
+import CategoriaProduto from "./components/CategoriaProduto";
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <GlobalStyle/>
       <Header/>
       <BannerPrincipal/>
+
+      <CategoriaProduto/>
 
       <SobreEmpresa/>
       <Footer/>

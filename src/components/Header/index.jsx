@@ -3,12 +3,13 @@ import logo from "../../assets/images/logo.svg";
 import search from "../../assets/images/search.svg";
 import styled from "styled-components";
 import { corTextoInput } from "../UI/Variaveis";
+import { margimPagina } from "../UI/Variaveis";
 
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 152px;
+  margin: 0 ${margimPagina};
 `;
 export const Div = styled.div`
     display: flex;
