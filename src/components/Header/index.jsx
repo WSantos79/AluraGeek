@@ -1,35 +1,47 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-import { Header, Div, Busca, Login, IconBusca } from "./styles";
+import { Header, Div, Busca, Login, IconBusca, IconCancel } from "./styles";
 import search from "../../assets/images/icon-search.png";
-import { useContext } from "react";
-import { ResponsiveContext } from '../../common/context/responsive'
+import cancel from "../../assets/images/cancel.png";
 
-function handleBusca(setTela, tela) {
-  setTela(true);
-  console.log(tela)
+function showSearch() {
+  document.querySelector("[data-busca]").style.display = `block`;
+  document.querySelector("[data-iconBusca]").style.display = `none`;
+  document.querySelector("[data-login]").style.display = `none`;
+  document.querySelector("[data-logo]").style.display = `none`;
+  document.querySelector("[data-cancel]").style.display = `block`;
+  document.querySelector("[data-header]").style.justifyContent = `space-around`;
+}
+
+function disableSearch() {
+  document.querySelector("[data-busca]").style.display = `none`;
+  document.querySelector("[data-iconBusca]").style.display = `block`;
+  document.querySelector("[data-login]").style.display = `block`;
+  document.querySelector("[data-logo]").style.display = `block`;
+  document.querySelector("[data-cancel]").style.display = `none`;
+  document.querySelector("[data-header]").style.justifyContent = `space-between`;
 }
 
 export default () => {
-  const { setTela, tela } = useContext(ResponsiveContext);
-
   return (
     <>
-      <Header>
+      <Header data-header>
         <Div>
-          <img src={logo} alt="Logo do site Alura Geek"></img>
-          <Busca 
-          style={{ /* display: `${tela ? 'block' : 'none'}` */ }}
-          placeholder="O que deseja encontrar?" type="search"></Busca>
+          <img data-logo src={logo} alt="Logo do site Alura Geek"></img>
+          <Busca
+            data-busca
+            placeholder="O que deseja encontrar?"
+            type="search"
+          ></Busca>
         </Div>
-        <Login>Login</Login>
-        <IconBusca 
-        style={{ /* display: `${tela ? 'none' : 'block'}` */ }}
-        onClick={() => {
-            console.log(tela)
-            handleBusca(setTela, tela);
-          }} 
-          src={search} alt="Ícone para busca no site"/>
+        <Login data-login>Login</Login>
+        <IconBusca
+          data-iconBusca
+          onClick={() => {showSearch()}}
+          src={search}
+          alt="Ícone para busca no site"
+        />
+        <IconCancel onClick={() => {disableSearch()}} src={cancel} alt="" data-cancel />
       </Header>
     </>
   );

@@ -1,6 +1,6 @@
 import Right from "../../assets/images/right.svg";
 import appConfig from "../../config.json";
-import { Section, Div, H1, VerTudo, A, Categoria, Foto, NomeProduto, Valor, VerProduto, Ver } from "./styles";
+import { Section, Div, H1, VerTudo, A, Categoria, Foto, NomeProduto, Valor, VerProduto, Ver, Produto } from "./styles";
 
 export default () => {
   return (
@@ -18,14 +18,14 @@ export default () => {
             <Categoria>
               {categoria.produtos.slice(0, 6).map((produto) => {
                 return (
-                  <section>
+                  <Produto>
                     <Foto src={produto.imagem}></Foto>
                     <NomeProduto>{produto.nome}</NomeProduto>
                     <Valor>{produto.valor}</Valor>
                     <VerProduto>
                       <Ver href="#">Ver produto</Ver>
                     </VerProduto>
-                  </section>
+                  </Produto>
                 );
               })}
             </Categoria>

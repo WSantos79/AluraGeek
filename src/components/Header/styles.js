@@ -45,7 +45,10 @@ export const Busca = styled.input`
   text-indent: 10px;
   
   @media (max-width: 480px) {   
-   display: none;
+    display: none;
+    background: #f5f5f5;   
+    width: 320px;
+    margin: 0;
   }
 
  @media (min-width: 481px) and (max-width: 1080px) {
@@ -85,7 +88,15 @@ export const IconBusca = styled.img`
     width: 20px;
     cursor: pointer;
     @media (max-width: 480px) {
-        display: block;        
+        display: block; 
+        width: 20px;   
     }
+`
+
+export const IconCancel = styled.img`
+    display: none;
+    cursor: pointer;
+    margin-left: 10px;
+    align-self: center;
 `
 ;

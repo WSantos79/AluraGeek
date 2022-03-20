@@ -12,3 +12,5 @@ export const ResponsiveProvider = ({ children }) => {
     </ResponsiveContext.Provider>
   )
 }
+
+// nao estou usando
