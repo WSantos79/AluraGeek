@@ -18,14 +18,14 @@ export default () => {
             <Categoria>
               {categoria.produtos.slice(0, 6).map((produto) => {
                 return (
-                  <Produto>
+                  <section>
                     <Foto src={produto.imagem}></Foto>
                     <NomeProduto>{produto.nome}</NomeProduto>
                     <Valor>{produto.valor}</Valor>
                     <VerProduto>
                       <Ver href="#">Ver produto</Ver>
                     </VerProduto>
-                  </Produto>
+                  </section>
                 );
               })}
             </Categoria>

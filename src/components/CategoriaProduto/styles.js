@@ -57,7 +57,7 @@ export const Categoria = styled.div`
  
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     
   & > section:nth-child(n+3){
     display: none;
@@ -71,11 +71,6 @@ export const Categoria = styled.div`
     }
   }
 `;
-
-export const Produto = styled.section`
-  //width: max-content;  DELETAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-  
-`
 
 export const Valor = styled.span`
   color: ${corTextoPrimario};
@@ -95,10 +90,6 @@ export const Ver = styled(A)`
 export const Foto = styled.img`
   width: 100%; 
   object-fit: cover;
-
-  @media (max-width: 480px) {
-    //width: auto;
-  }
 `;
 
 export const NomeProduto = styled.h4`
