@@ -1,4 +1,4 @@
-{
+{ 
   "categorias": [
     {
       "nome": "Star Wars",
@@ -7,37 +7,37 @@
           "id": 1,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/e985f833f50d3f023360e855a7875ce6b05df16b/src/assets/images/starwars/one.svg"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/one.png?raw=true"
         },
         {
           "id": 2,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/two.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/two.png?raw=true"
         },
         {
           "id": 3,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/three.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/three.png?raw=true"
         },
         {
           "id": 4,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/four.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/four.png?raw=true"
         },
         {
           "id": 5,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/five.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/five.png?raw=true"
         },
         {
           "id": 6,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/six.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/six.png?raw=true"
         }
       ]
     },
@@ -47,39 +47,39 @@
       "produtos": [
         {
           "id": 1,
-          "nome": "Produto XYZ",
+          "nome": "Controle XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/e985f833f50d3f023360e855a7875ce6b05df16b/src/assets/images/starwars/one.svg"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/one.png?raw=true"
         },
         {
           "id": 2,
-          "nome": "Produto XYZ",
+          "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/two.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/two.png?raw=true"
         },
         {
           "id": 3,
-          "nome": "Produto XYZ",
+          "nome": "Console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/three.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/three.png?raw=true"
         },
         {
           "id": 4,
-          "nome": "Produto XYZ",
+          "nome": "Console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/four.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/four.png?raw=true"
         },
         {
           "id": 5,
-          "nome": "Produto XYZ",
+          "nome": "Console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/five.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/five.png?raw=true"
         },
         {
           "id": 6,
-          "nome": "Produto XYZ",
+          "nome": "Game Boy Color",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/six.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/six.png?raw=true"
         }
       ]
     },
@@ -89,42 +89,42 @@
       "produtos": [
         {
           "id": 1,
-          "nome": "Produto XYZ",
+          "nome": "Camisa Atari",
           "valor": "R$ 60,00",
-          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/e985f833f50d3f023360e855a7875ce6b05df16b/src/assets/images/starwars/one.svg"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/one.png?raw=true"
         },
         {
           "id": 2,
-          "nome": "Produto XYZ",
+          "nome": "Camisa SNES",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/two.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/two.png?raw=true"
         },
         {
           "id": 3,
-          "nome": "Produto XYZ",
+          "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/three.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/three.png?raw=true"
         },
         {
           "id": 4,
-          "nome": "Produto XYZ",
+          "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/four.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/four.png?raw=true"
         },
         {
           "id": 5,
-          "nome": "Produto XYZ",
+          "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/five.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/five.png?raw=true"
         },
         {
           "id": 6,
-          "nome": "Produto XYZ",
+          "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/starwars/six.png?raw=true"
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/six.png?raw=true"
         }
       ] 
     }
-  ]
-
+  ],
+  "IsSearch": false
 }

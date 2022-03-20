@@ -13,19 +13,9 @@ color: #464646;
 width: 100%;
 height: 102px;
 
-@media (max-width: 480px) {        
-    font-size: 1em;
-
-    @media (max-width: 480px) {        
-        & > p:first-child  {
-            margin: 0 1rem;
-        }
-        & > a:last-child  {
-            margin: 0 1rem;
-        }
-    }
-       
- }
+@media (max-width: 480px) {
+    font-size: 1em;  
+}
 `
 
 export const Span = styled.span`

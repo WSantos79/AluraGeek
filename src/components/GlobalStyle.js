@@ -14,9 +14,4 @@ export const GlobalStyle = createGlobalStyle`
   font-style: normal;
   font-weight: 400;
 }
-
-body {  
-  margin-top: 32px;
-}
-
 `

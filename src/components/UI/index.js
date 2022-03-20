@@ -12,8 +12,16 @@ export const BotaoPrimario = styled.button`
   line-height: 19px;
   color: #FFFFFF;
 
+  transition-duration: 300ms;  
+  transition-timing-function: ease-out;
+
   &:hover {
       cursor: pointer;
       background: ${corBotaoPrimarioHover};
+  }
+
+  @media (max-width: 1080px) {
+    padding: 12px 1rem;
+  
   }
 `
