@@ -21,6 +21,7 @@ export const BotaoPrimario = styled.button`
   }
 
   @media (max-width: 1080px) {
-    padding: 12px 1rem;  
+    padding: 12px 1rem;
+    font-size: 14px
   }
 `

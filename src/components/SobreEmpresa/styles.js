@@ -4,7 +4,6 @@ import { corTextoInput, corTextoPrimario, margimPagina } from "../UI/Variaveis";
 export const Section = styled.section`
   width: 100%;
   height: 368px;
-  margin-top: 4rem;
   display: flex;
   justify-content: center;
   

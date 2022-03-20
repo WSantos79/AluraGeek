@@ -3,26 +3,12 @@ import logo from "../../assets/images/logo.svg";
 import { Header, Div, Busca, Login, IconBusca, IconCancel } from "./styles";
 import search from "../../assets/images/icon-search.png";
 import cancel from "../../assets/images/cancel.png";
-
-function showSearch() {
-  document.querySelector("[data-busca]").style.display = `block`;
-  document.querySelector("[data-iconBusca]").style.display = `none`;
-  document.querySelector("[data-login]").style.display = `none`;
-  document.querySelector("[data-logo]").style.display = `none`;
-  document.querySelector("[data-cancel]").style.display = `block`;
-  document.querySelector("[data-header]").style.justifyContent = `space-around`;
-}
-
-function disableSearch() {
-  document.querySelector("[data-busca]").style.display = `none`;
-  document.querySelector("[data-iconBusca]").style.display = `block`;
-  document.querySelector("[data-login]").style.display = `block`;
-  document.querySelector("[data-logo]").style.display = `block`;
-  document.querySelector("[data-cancel]").style.display = `none`;
-  document.querySelector("[data-header]").style.justifyContent = `space-between`;
-}
+import { showSearch, disableSearch } from "./funcao";
+import { Link } from "react-router-dom";
+//import { useHistory } from 'react-router-dom';
 
 export default () => {
+  //const history = useHistory();
   return (
     <>
       <Header data-header>
@@ -34,7 +20,10 @@ export default () => {
             type="search"
           ></Busca>
         </Div>
-        <Login data-login>Login</Login>
+        
+        
+        <Login data-login><Link to="/login">Login</Link></Login>
+        
         <IconBusca
           data-iconBusca
           onClick={() => {showSearch()}}

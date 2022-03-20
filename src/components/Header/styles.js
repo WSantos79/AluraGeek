@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import search from "../../assets/images/search.svg";
-import { corTextoInput } from "../UI/Variaveis";
+import { corTextoInput, corFundo } from "../UI/Variaveis";
 import { margimPagina } from "../UI/Variaveis";
-
 
 export const Header = styled.header`
   display: flex;
@@ -25,12 +24,17 @@ export const Div = styled.div`
     @media (max-width: 1080px) {
         & > img:first-child {
             width: 150px;
+
+            visibility: visible;
+            opacity: 1;
+            -webkit-transition: opacity 600ms, visibility 600ms;
+            transition: opacity 600ms, visibility 600ms;
         }   
     }
 `
 export const Busca = styled.input`
   border: none;
-  background: #f5f5f5 360px url(${search});
+  background: ${corFundo} 360px url(${search});
   background-repeat: no-repeat;
    
   font-size: 14px;
@@ -43,22 +47,25 @@ export const Busca = styled.input`
   border-radius: 20px;
   margin: 0px 2rem; 
   text-indent: 10px;
-  
+
   @media (max-width: 480px) {   
-    display: none;
-    background: #f5f5f5;   
-    width: 320px;
-    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+
+    background: ${corFundo};
+    width: 0px;
+    margin: 0;    
   }
 
  @media (min-width: 481px) and (max-width: 1080px) {
     width: 272px;
-    background: #f5f5f5 245px url(${search});
+    background: ${corFundo} 245px url(${search});
     background-repeat: no-repeat;
   }
 `;
 export const Login = styled.a`  
-  
   padding: 1rem 70px;
  
   background: #ffffff;
@@ -66,9 +73,16 @@ export const Login = styled.a`
   color: #2a7ae4;
   box-sizing: border-box;
 
+  
+
   font-size: 1rem;
   transition-duration: 300ms;  
   transition-timing-function: ease-out;
+
+  & > a:first-child {
+    text-decoration: none;
+    color: #2a7ae4;
+  }
 
   &:hover {
       transition: opacity .5s linear;
@@ -77,10 +91,16 @@ export const Login = styled.a`
   }
 
   @media (max-width: 480px) {
-    padding: 12px 47.5px;  
+    padding: 12px 47.5px;
+    font-size: 14px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
 }
   @media (min-width: 481px) and (max-width: 1080px) {
     padding: 12px 64px;
+    font-size: 14px;
 }
 `
 export const IconBusca = styled.img`
@@ -89,7 +109,8 @@ export const IconBusca = styled.img`
     cursor: pointer;
     @media (max-width: 480px) {
         display: block; 
-        width: 20px;   
+        width: 25px;
+        margin-left: 10px
     }
 `
 
