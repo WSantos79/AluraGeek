@@ -13,31 +13,31 @@
           "id": 2,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/two.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/starwars/two.svg"
         },
         {
           "id": 3,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/three.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/starwars/three.svg"
         },
         {
           "id": 4,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/four.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/starwars/four.svg"
         },
         {
           "id": 5,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/five.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/starwars/five.svg"
         },
         {
           "id": 6,
           "nome": "Produto XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/six.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/starwars/six.svg"
         }
       ]
     },
@@ -49,37 +49,37 @@
           "id": 1,
           "nome": "Controle XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/one.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/consoles/one.svg"
         },
         {
           "id": 2,
           "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/two.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/consoles/two.svg"
         },
         {
           "id": 3,
           "nome": "Console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/three.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/consoles/three.svg"
         },
         {
           "id": 4,
           "nome": "Console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/four.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/consoles/four.svg"
         },
         {
           "id": 5,
           "nome": "Console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/five.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/consoles/five.svg"
         },
         {
           "id": 6,
           "nome": "Game Boy Color",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/consoles/six.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/consoles/six.svg"
         }
       ]
     },
@@ -91,37 +91,37 @@
           "id": 1,
           "nome": "Camisa Atari",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/one.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/one.svg"
         },
         {
           "id": 2,
           "nome": "Camisa SNES",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/two.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/two.svg"
         },
         {
           "id": 3,
           "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/three.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/three.svg"
         },
         {
           "id": 4,
           "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/four.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/four.svg"
         },
         {
           "id": 5,
           "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/five.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/five.svg"
         },
         {
           "id": 6,
           "nome": "Controle e console XYZ",
           "valor": "R$ 60,00",
-          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/six.png?raw=true"
+          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/six.svg"
         }
       ] 
     }

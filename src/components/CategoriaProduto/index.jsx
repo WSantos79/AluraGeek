@@ -1,6 +1,6 @@
 import Right from "../../assets/images/right.svg";
 import appConfig from "../../config.json";
-import { Section, Div, H1, VerTudo, A, Categoria, Foto, NomeProduto, Valor, VerProduto, Ver, Produto } from "./styles";
+import { Section, Div, H1, VerTudo, A, Categoria, Foto, NomeProduto, Valor, VerProduto, Ver } from "../UI/index";
 
 export default () => {
   return (

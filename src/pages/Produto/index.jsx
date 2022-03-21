@@ -8,8 +8,7 @@ import Produto from "../../components/Produto";
 export default () => {
   return (
     <>
-    <Header />
-      <BannerPrincipal />
+    <Header />     
       <Produto />
       <SobreEmpresa />
       <Footer />
