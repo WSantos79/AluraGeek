@@ -53,7 +53,7 @@ export const Busca = styled.input`
     opacity: 0;
     -webkit-transition: opacity 600ms, visibility 600ms;
     transition: opacity 600ms, visibility 600ms;
-
+    padding: 0;
     background: ${corFundo};
     width: 0px;
     margin: 0;    
@@ -108,16 +108,15 @@ export const IconBusca = styled.img`
     width: 20px;
     cursor: pointer;
     @media (max-width: 480px) {
-        display: block; 
-        width: 25px;
-        margin-left: 10px
+        display: block;        
+        //margin-left: 10px
     }
 `
 
 export const IconCancel = styled.img`
     display: none;
     cursor: pointer;
-    margin-left: 10px;
+    //margin-left: 10px;
     align-self: center;
 `
 ;

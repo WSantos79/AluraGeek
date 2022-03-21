@@ -3,6 +3,7 @@ export function showSearch() {
     busca.style.visibility = `visible`;
     busca.style.opacity = '1';
     busca.style.width = '320px';
+    busca.style.padding = '8px 16px';
   
     document.querySelector("[data-cancel]").style.display = `block`;
     document.querySelector("[data-iconBusca]").style.display = `none`;
@@ -27,6 +28,7 @@ export function disableSearch() {
     busca.style.visibility = `hidden`;
     busca.style.opacity = '0';
     busca.style.width = '0px';
+    busca.style.padding = '0';
   
     document.querySelector("[data-cancel]").style.display = `none`;
     document.querySelector("[data-iconBusca]").style.display = `block`;

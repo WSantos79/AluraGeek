@@ -5,10 +5,9 @@ import search from "../../assets/images/icon-search.png";
 import cancel from "../../assets/images/cancel.png";
 import { showSearch, disableSearch } from "./funcao";
 import { Link } from "react-router-dom";
-//import { useHistory } from 'react-router-dom';
+
 
 export default () => {
-  //const history = useHistory();
   return (
     <>
       <Header data-header>
