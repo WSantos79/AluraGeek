@@ -25,18 +25,21 @@ export const Header = styled.header`
 export const Div = styled.div`
     display: flex;
     align-items: center;
-
-    @media (max-width: 1080px) {
-        & > img:first-child {
-            width: 150px;
-
-            visibility: visible;
-            opacity: 1;
-            -webkit-transition: opacity 600ms, visibility 600ms;
-            transition: opacity 600ms, visibility 600ms;
-        }   
-    }
+    
 `
+export const Logo = styled.img`
+  width: 176px;
+  
+@media (max-width: 1080px) {  
+      width: 150px;
+
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: opacity 600ms, visibility 600ms;
+      transition: opacity 600ms, visibility 600ms;
+}
+`
+
 export const Busca = styled.input`
   border: none;
   background: ${corFundo} 360px url(${search});

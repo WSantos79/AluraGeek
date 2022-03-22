@@ -52,6 +52,7 @@ margin: 1rem 0;
   font-size: 1rem;
   line-height: 16px;
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 `

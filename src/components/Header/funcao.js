@@ -12,8 +12,9 @@ export function showSearch() {
     login.style.visibility = `hidden`;
     login.style.opacity = '0';
     login.style.width = '0px';
-    login.style.padding = '0';
-    login.style.marginTop = '-200px';
+    login.style.padding = '0';  
+    login.innerText = '';
+    login.style.border = 'none';
   
     const logo = document.querySelector("[data-logo]")
     logo.style.visibility = `hidden`;
@@ -35,11 +36,13 @@ export function disableSearch() {
   
   
     const login = document.querySelector("[data-login]")
+    login.innerText = 'Login';
+    login.style.border = '1px solid #2a7ae4';
     login.style.visibility = `visible`;
     login.style.opacity = '1';
     login.style.padding = '12px 47.5px';
     login.style.width = 'initial';
-    login.style.marginTop = '0'
+    
   
     const logo = document.querySelector("[data-logo]")
     logo.style.visibility = `visible`;

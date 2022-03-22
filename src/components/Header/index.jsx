@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-import { Header, Div, Busca, Login, IconBusca, IconCancel } from "./styles";
+import { Header, Div, Busca, Login, IconBusca, IconCancel, Logo } from "./styles";
 import search from "../../assets/images/icon-search.png";
 import cancel from "../../assets/images/cancel.png";
 import { showSearch, disableSearch } from "./funcao";
@@ -12,7 +12,7 @@ export default () => {
       <Header data-header>
         <Div>
           <Link to="/Home">
-            <img data-logo src={logo} alt="Logo do site Alura Geek"></img>
+            <Logo data-logo src={logo} alt="Logo do site Alura Geek"></Logo>
           </Link>
           <Busca
             data-busca
