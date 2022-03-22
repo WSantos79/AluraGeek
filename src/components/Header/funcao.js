@@ -2,7 +2,7 @@ export function showSearch() {
     const busca = document.querySelector("[data-busca]")
     busca.style.visibility = `visible`;
     busca.style.opacity = '1';
-    busca.style.width = '320px';
+    busca.style.width = '300px';
     busca.style.padding = '8px 16px';
   
     document.querySelector("[data-cancel]").style.display = `block`;

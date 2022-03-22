@@ -1,153 +1,68 @@
 import React from "react";
-import styled from "styled-components";
-import { corTextoPrimario, corFundo } from "../UI/Variaveis";
-
-
 import appConfig from "../../config.json";
-import { Section, Div as DivCategoria, H1, Categoria, Foto as FotoMenor, NomeProduto, Valor, VerProduto, Ver } from "../UI/index";
-
-export const Container = styled.div`  
-  padding: 4rem 0 4rem 0;
-  background: ${corFundo};
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: 480px) {
-    padding: 0 0 1rem 0;
-    display: block;
-  } 
-  @media (min-width: 481px) and (max-width: 1080px) {
-    padding: 0 0 2rem 0;
-  }
-`;
-export const Produto = styled.section`
-  display: flex;  
-  height: 403px;
-  align-items: center;
-
-  @media (max-width: 480px) {
-    display: inherit;
-    width: 100%;
-  } 
-
-  @media (min-width: 481px) and (max-width: 1080px) {
-    
-    height: 221px;
-  }
-
-`;
-
-export const Foto = styled.div` 
-  width: 560px;
-  height: 403px;
-
-  & > img:first-child{
-    width: max-content;
-  }
-
-  @media (max-width: 480px) {
-    width: 100%;
-    height: 192px;
-  } 
-  @media (min-width: 481px) and (max-width: 1080px) {
-    width: 254px;
-    height: 157px;
-  }
-`;
-
-export const Div = styled.div` 
-  width: 560px;
-  height: 210px;
-  margin-left: 1rem;
-    
-  @media (max-width: 480px) {
-    width: 92%;
-    height: 189px;
-    margin: 1rem 1rem 2rem 1rem;
-  } 
-  @media (min-width: 481px) and (max-width: 1080px) {
-    width: 434px;
-    height: 157px;
-  }
-  
-`;
-
-export const Nome = styled.p`
-  font-weight: 500;
-  font-size: 52px;
-  line-height: 61px;
-  color: ${corTextoPrimario};
-  margin: 8px 0;
-  @media (max-width: 1080px) {
-    font-size: 22px;
-    line-height: 26px;
-  }
-`;
-export const Preco = styled.span`
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: ${corTextoPrimario};
-`;
-export const Descricao = styled.p`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: ${corTextoPrimario};
-  margin: 8px 0;
-  
-  @media (max-width: 1080px) {
-    font-size: 14px;
-    line-height: 16px;    
-  }
-`;
+import {
+  Section,  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  Ver,  Produto,} from "../UI/index";
+import {
+  Container,  ProdutoDestaq,  Foto,  Div,  Nome,  Preco,  Descricao,} from "./styles";import { useContext } from "react";
+import { ProdutoContext } from "../../common/context/produto";
+import { scrollToTop } from "../UI/Variaveis";
+import { useEffect } from "react";
 
 export default () => {
+  const { produto, categoria, setProduto, setCategoria } =
+    useContext(ProdutoContext);
+
+  useEffect(() => {
+    scrollToTop();
+  }, [produto, categoria]);
+
   return (
     <>
       <Container>
-        <Produto>
-          <Foto 
-             style={{ 
-              background: `url("https://raw.githubusercontent.com/WSantos79/AluraGeek/906cba7d6b35ba42aae861de63928ff9fc37e48e/src/assets/images/produtos/starwars/one.svg") center`,
+        <ProdutoDestaq>
+          <Foto
+            style={{
+              background: `center / cover no-repeat url("${appConfig.categorias[categoria].produtos[produto].imagem}")`,
               backgroundRepeat: `no-repeat`,
-              backgroundSize: `cover`
-            }}           
+              backgroundSize: `cover`,
+            }}
           ></Foto>
           <Div>
-            <Nome>Produto XYZ</Nome>
-            <Preco>R$ 60,00</Preco>
-            <Descricao>
-              Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Paisis, filhis, espiritis santis. Cevadis im ampola pa arma uma pindureta.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. 
-            </Descricao>
+            <Nome>
+              {appConfig.categorias[categoria].produtos[produto].nome}
+            </Nome>
+            <Preco>
+              {appConfig.categorias[categoria].produtos[produto].valor}
+            </Preco>
+            <Descricao>{appConfig.categorias[categoria].produtos[produto].descricao}</Descricao>
           </Div>
-        </Produto>
+        </ProdutoDestaq>
       </Container>
 
-
-      {appConfig.categorias.map((categoria) => {
-        return (
-          <Section>
-            <DivCategoria>
-              <H1>Produtos similares</H1>              
-            </DivCategoria>
-            <Categoria>
-              {categoria.produtos.slice(0, 6).map((produto) => {
-                return (
-                  <section>
-                    <FotoMenor src={produto.imagem}></FotoMenor>
-                    <NomeProduto>{produto.nome}</NomeProduto>
-                    <Valor>{produto.valor}</Valor>
-                    <VerProduto>
-                      <Ver href="#">Ver produto</Ver>
-                    </VerProduto>
-                  </section>
-                );
-              })}
-            </Categoria>
-          </Section>
-        );
-      })}
+      <Section>
+        <DivCategoria>
+          <H1>Produtos similares</H1>
+        </DivCategoria>
+        <Categoria>
+          {appConfig.categorias[categoria].produtos.slice(0, 6).map((item) => {
+            return (
+              <Produto
+                onClick={() => {
+                  setCategoria(item.categoria);
+                  setProduto(item.id);
+                }}
+              >
+                <FotoMenor src={item.imagem}></FotoMenor>
+                <NomeProduto>{item.nome}</NomeProduto>
+                <Valor>{item.valor}</Valor>
+                <VerProduto>
+                  <Ver href="#">Ver produto</Ver>
+                </VerProduto>
+              </Produto>
+            );
+          })}
+        </Categoria>
+      </Section>
     </>
   );
 };

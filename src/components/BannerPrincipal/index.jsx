@@ -3,6 +3,8 @@ import { BotaoPrimario } from "../UI";
 import { Banner, Conteudo, H1, H2 } from "./styles";
 
 export default () => {
+
+  
   return (
     <>
       <Banner>

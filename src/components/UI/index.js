@@ -84,8 +84,7 @@ export const Categoria = styled.div`
   display: grid;
   grid-template-rows: auto;
   gap: 1rem;
-  grid-template-columns: repeat(6, 1fr);
- 
+  grid-template-columns: repeat(6, 1fr);  
 
   @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);
@@ -102,7 +101,20 @@ export const Categoria = styled.div`
     }
   }
 `;
+export const Produto = styled.section`
+  cursor: pointer;
+  transition: all ease 0.5s;
+  
+  & > a:first-child {
+    text-decoration: none;
+    color: #2a7ae4;
+  }
 
+  &:hover {
+    transform: scale(1.1);
+  }
+
+`
 export const Valor = styled.span`
   color: ${corTextoPrimario};
   font-weight: 700;

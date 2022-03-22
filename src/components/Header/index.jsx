@@ -6,22 +6,20 @@ import cancel from "../../assets/images/cancel.png";
 import { showSearch, disableSearch } from "./funcao";
 import { Link } from "react-router-dom";
 
-
 export default () => {
   return (
     <>
       <Header data-header>
         <Div>
-          <img data-logo src={logo} alt="Logo do site Alura Geek"></img>
+        <Link to="/Home"><img data-logo src={logo} alt="Logo do site Alura Geek"></img></Link>
           <Busca
             data-busca
             placeholder="O que deseja encontrar?"
             type="search"
           ></Busca>
-        </Div>
+        </Div>       
         
-        
-        <Login data-login><Link to="/login">Login</Link></Login>
+        <Link to="/login"><Login data-login>Login</Login></Link>
         
         <IconBusca
           data-iconBusca
