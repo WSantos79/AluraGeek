@@ -8,6 +8,11 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   margin: 2rem ${margimPagina};
+
+  & > a {
+    text-decoration: none;
+    color: #2a7ae4;
+  }
   
   @media (max-width: 480px) {
     margin: 1rem 1rem;
@@ -78,11 +83,6 @@ export const Login = styled.a`
   font-size: 1rem;
   transition-duration: 300ms;  
   transition-timing-function: ease-out;
-
-  & > a:first-child {
-    text-decoration: none;
-    color: #2a7ae4;
-  }
 
   &:hover {
       transition: opacity .5s linear;

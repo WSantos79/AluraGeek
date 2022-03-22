@@ -11,23 +11,36 @@ export default () => {
     <>
       <Header data-header>
         <Div>
-        <Link to="/Home"><img data-logo src={logo} alt="Logo do site Alura Geek"></img></Link>
+          <Link to="/Home">
+            <img data-logo src={logo} alt="Logo do site Alura Geek"></img>
+          </Link>
           <Busca
             data-busca
             placeholder="O que deseja encontrar?"
             type="search"
           ></Busca>
-        </Div>       
-        
-        <Link to="/login"><Login data-login>Login</Login></Link>
-        
+        </Div>
+
+        <Link to="/login">
+          <Login data-login>Login</Login>
+        </Link>
+
         <IconBusca
           data-iconBusca
-          onClick={() => {showSearch()}}
+          onClick={() => {
+            showSearch();
+          }}
           src={search}
           alt="Ícone para busca no site"
         />
-        <IconCancel onClick={() => {disableSearch()}} src={cancel} alt="" data-cancel />
+        <IconCancel
+          onClick={() => {
+            disableSearch();
+          }}
+          src={cancel}
+          alt=""
+          data-cancel
+        />
       </Header>
     </>
   );
