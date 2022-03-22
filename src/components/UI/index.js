@@ -27,7 +27,7 @@ export const BotaoPrimario = styled.button`
   }
 `
 
-/* CategoriaProdutos - Produtos Similares  */
+/* CategoriaProdutos - Produtos Similares // Produtos(vendedor) - Home */
 
 export const Section = styled.section`
   margin: 4rem ${margimPagina} 4rem ${margimPagina};
@@ -133,6 +133,9 @@ export const Ver = styled(A)`
 export const Foto = styled.img`
   width: 100%; 
   object-fit: cover;
+  
+height: 174px;
+
 `;
 
 export const NomeProduto = styled.h4`

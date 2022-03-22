@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Form, Legenda, Input, Entrar } from "./styles";
+import { Link } from "react-router-dom";
 
 export default () => {
   return (
@@ -14,10 +15,12 @@ export default () => {
               required
               placeholder="Escreva sua senha"
             ></Input>
-            <Entrar>Entrar</Entrar>
+           <Link to="/produto/home"><Entrar>Entrar</Entrar></Link>
           </fieldset>
+          
         </Form>
       </Container>
+        
     </>
   );
 };

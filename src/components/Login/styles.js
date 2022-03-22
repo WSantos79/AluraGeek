@@ -70,7 +70,12 @@ export const Input = styled.input`
 export const Entrar = styled(BotaoPrimario)`
   padding: 20.5px 185.5px;
   align-self: center;
-  
+
+  & > a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
   @media (max-width: 1080px) {
     padding: 12px 34px;
   }

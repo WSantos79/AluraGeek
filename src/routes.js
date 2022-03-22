@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Produto from "./pages/Produto";
 import { ProdutoProvider } from "./common/context/produto";
+import ProdutoVendedor from "./pages/ProdutoVendedor";
 
 function Router() {  
     return (
@@ -13,7 +14,8 @@ function Router() {
                 <Routes>
                     <Route exact path="*" element={<Home />} />
                     <Route exact path="produto" element={<Produto />} />
-                    <Route exact path="login" element={<Login />} />               
+                    <Route exact path="login" element={<Login />} />        
+                    <Route exact path="/produto/home" element={<ProdutoVendedor />} />       
                 </Routes>
             </ProdutoProvider>
         </BrowserRouter >
