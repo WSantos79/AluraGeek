@@ -8,8 +8,7 @@ import Login from "../../components/Login";
 export default () => {
   return (
     <>
-    <Header />
-      <BannerPrincipal />
+    <Header />      
       <Login />
       <SobreEmpresa />
       <Footer />
