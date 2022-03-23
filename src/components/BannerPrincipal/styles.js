@@ -22,7 +22,8 @@ export const Conteudo = styled.div`
   margin: 0 0 2rem ${margimPagina};
   color: #FFFFFF;
   align-self: flex-end; 
-
+  word-wrap: break-word;
+  
   @media (max-width: 480px) {  
     margin: 0 0 1rem 1rem;
   }
@@ -51,8 +52,7 @@ margin: 1rem 0;
 @media (max-width: 480px) {
   font-size: 1rem;
   line-height: 16px;
-  font-weight: 600;
-  word-wrap: break-word;
+  font-weight: 600;  
 }
 
 `
