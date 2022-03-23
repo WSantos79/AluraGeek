@@ -25,7 +25,7 @@ export const Header = styled.header`
 `;
 export const Div = styled.div`
     display: flex;
-    align-items: center;
+    align-items: center;    
     
 `
 export const Logo = styled.img`
@@ -54,7 +54,7 @@ export const Busca = styled.input`
   height: 40px;
   
   border-radius: 20px;
-  margin: 0px 2rem; 
+  margin-left: 2rem; 
   text-indent: 10px;
 
   @media (max-width: 480px) {   

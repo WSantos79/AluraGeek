@@ -19,6 +19,7 @@ export const ProdutoDestaq = styled.section`
   display: flex;
   height: 403px;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 480px) {
     display: inherit;
@@ -54,14 +55,14 @@ export const Div = styled.div`
   width: 560px;
   height: 210px;
   margin-left: 1rem;
-
+  word-wrap: break-word;
   @media (max-width: 480px) {
     width: 92%;
     height: 189px;
     margin: 1rem 1rem 2rem 1rem;
   }
   @media (min-width: 481px) and (max-width: 1080px) {
-    width: 434px;
+    width: 57%;
     height: 157px;
   }
 `;
@@ -92,6 +93,6 @@ export const Descricao = styled.p`
 
   @media (max-width: 1080px) {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 16px;    
   }
 `;
