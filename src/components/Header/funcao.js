@@ -6,7 +6,7 @@ export function showSearch() {
     busca.style.padding = '8px 16px';
   
     document.querySelector("[data-cancel]").style.display = `block`;
-    document.querySelector("[data-iconBusca]").style.display = `none`;
+    document.querySelector("[data-iconbusca]").style.display = `none`;
   
     const login = document.querySelector("[data-login]")
     login.style.visibility = `hidden`;
@@ -32,7 +32,7 @@ export function disableSearch() {
     busca.style.padding = '0';
   
     document.querySelector("[data-cancel]").style.display = `none`;
-    document.querySelector("[data-iconBusca]").style.display = `block`;
+    document.querySelector("[data-iconbusca]").style.display = `block`;
   
   
     const login = document.querySelector("[data-login]")

@@ -21,12 +21,12 @@ export default () => {
           ></Busca>
         </Div>
 
-        <Link to="/login">
-          <Login data-login>Login</Login>
-        </Link>
+        
+          <Login to="/login" data-login>Login</Login>
+        
 
         <IconBusca
-          data-iconBusca
+          data-iconbusca
           onClick={() => {
             showSearch();
           }}

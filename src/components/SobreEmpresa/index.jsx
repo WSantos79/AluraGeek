@@ -22,7 +22,7 @@ export default () => {
           <form>
             <Fieldset>
               <legend>Fale conosco</legend>
-              <LabelNome for="name" aria-label="Digite seu nome">
+              <LabelNome htmlFor="name" aria-label="Digite seu nome">
                 Nome
               </LabelNome>
               <Nome id="name" type="text" required/>

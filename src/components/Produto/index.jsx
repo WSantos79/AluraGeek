@@ -46,7 +46,7 @@ export default () => {
         <Categoria>
           {appConfig.categorias[categoria].produtos.slice(0, 6).map((item) => {
             return (
-              <Produto
+              <Produto key={item.id}
                 onClick={() => {
                   setCategoria(item.categoria);
                   setProduto(item.id);

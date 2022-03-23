@@ -1,19 +1,7 @@
 import Right from "../../assets/images/right.svg";
 import appConfig from "../../config.json";
 import {
-  Section,
-  Div,
-  H1,
-  VerTudo,
-  A,
-  Categoria,
-  Foto,
-  NomeProduto,
-  Valor,
-  VerProduto,
-  Ver,
-  Produto,
-} from "../UI/index";
+  Section,  Div,  H1,  VerTudo,  A,  Categoria,  Foto,  NomeProduto,  Valor,  VerProduto,  Ver,  Produto,} from "../UI/index";
 import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { Link } from "react-router-dom";
@@ -24,7 +12,7 @@ export default () => {
     <>
       {appConfig.categorias.map((categoria) => {
         return (
-          <Section>
+          <Section key={categoria.nome}>
             <Div>
               <H1>{categoria.nome}</H1>
               <VerTudo>
@@ -35,10 +23,10 @@ export default () => {
             <Categoria>
               {categoria.produtos.slice(0, 6).map((produto) => {
                 return (
-                  <Produto
+                  <Produto key={produto.id}
                     onClick={() => {
                       setCategoria(produto.categoria);
-                      setProduto(produto.id);                      
+                      setProduto(produto.id);
                     }}
                   >
                     <Link to="/produto">

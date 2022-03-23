@@ -2,6 +2,7 @@ import styled from "styled-components";
 import search from "../../assets/images/search.svg";
 import { corTextoInput, corFundo } from "../UI/Variaveis";
 import { margimPagina } from "../UI/Variaveis";
+import { Link } from "react-router-dom";
 
 export const Header = styled.header`
   display: flex;
@@ -73,7 +74,7 @@ export const Busca = styled.input`
     background-repeat: no-repeat;
   }
 `;
-export const Login = styled.a`  
+export const Login = styled(Link)`  
   padding: 1rem 70px;
  
   background: #ffffff;
