@@ -30,7 +30,7 @@ export const ProdutoDestaq = styled.section`
     height: 221px;
   }
 `;
-
+/*
 export const Foto = styled.div`
   width: 560px;
   height: 403px;
@@ -50,6 +50,42 @@ export const Foto = styled.div`
     height: 157px;
   }
 `;
+*/
+export const Foto = styled.img`
+  width: 560px;
+  height: 403px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  & > img:first-child {
+    width: max-content;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 192px;
+  }
+  @media (min-width: 481px) and (max-width: 1080px) {
+    width: 254px;
+    height: 157px;
+  }
+`
+/*
+box-sizing: border-box;
+padding: 0;
+border: none;
+margin: auto;
+display: block;
+width: 0;
+height: 0;
+min-width: 100%;
+max-width: 100%;
+min-height: 100%;
+max-height: 100%;
+object-fit: cover;
+
+
+*/
 
 export const Div = styled.div`
   width: 560px;
@@ -62,7 +98,7 @@ export const Div = styled.div`
     margin: 1rem 1rem 2rem 1rem;
   }
   @media (min-width: 481px) and (max-width: 1080px) {
-    width: 57%;
+    width: 57%; //434px
     height: 157px;
   }
 `;

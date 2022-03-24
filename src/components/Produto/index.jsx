@@ -1,9 +1,29 @@
 import React from "react";
 import appConfig from "../../config.json";
 import {
-  Section,  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  Ver,  Produto,} from "../UI/index";
+  Section,
+  Div as DivCategoria,
+  H1,
+  Categoria,
+  Foto as FotoMenor,
+  NomeProduto,
+  Valor,
+  VerProduto,
+  Ver,
+  Produto,
+} from "../UI/index";
 import {
-  Container,  ProdutoDestaq,  Foto,  Div,  Nome,  Preco,  Descricao,} from "./styles";import { useContext } from "react";
+  Container,
+  ProdutoDestaq,
+  Foto,
+  Span,
+  SpanUm,
+  Div,
+  Nome,
+  Preco,
+  Descricao,
+} from "./styles";
+import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { scrollToTop } from "../UI/Variaveis";
 import { useEffect } from "react";
@@ -16,17 +36,28 @@ export default () => {
     scrollToTop();
   }, [produto, categoria]);
 
-  return (
-    <>
-      <Container>
-        <ProdutoDestaq>
-          <Foto
+  /*
+<Foto
             style={{
               background: `center / cover no-repeat url("${appConfig.categorias[categoria].produtos[produto].imagem}")`,
               backgroundRepeat: `no-repeat`,
               backgroundSize: `cover`,
             }}
           ></Foto>
+
+
+*/
+  return (
+    <>
+      <Container>
+        <ProdutoDestaq>
+          
+            
+              <Foto
+                src={appConfig.categorias[categoria].produtos[produto].imagem}
+              ></Foto>
+            
+          
           <Div>
             <Nome>
               {appConfig.categorias[categoria].produtos[produto].nome}
@@ -34,7 +65,9 @@ export default () => {
             <Preco>
               {appConfig.categorias[categoria].produtos[produto].valor}
             </Preco>
-            <Descricao>{appConfig.categorias[categoria].produtos[produto].descricao}</Descricao>
+            <Descricao>
+              {appConfig.categorias[categoria].produtos[produto].descricao}
+            </Descricao>
           </Div>
         </ProdutoDestaq>
       </Container>
@@ -46,7 +79,8 @@ export default () => {
         <Categoria>
           {appConfig.categorias[categoria].produtos.slice(0, 6).map((item) => {
             return (
-              <Produto key={item.id}
+              <Produto
+                key={item.id}
                 onClick={() => {
                   setCategoria(item.categoria);
                   setProduto(item.id);
