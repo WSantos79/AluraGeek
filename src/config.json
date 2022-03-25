@@ -38,7 +38,7 @@
         {
           "categoria": 0,
           "id": 4,
-          "nome": "Produto CCC",
+          "nome": "Baby Yoda",
           "valor": "R$ 60,00",
           "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/starwars/five.webp?raw=true",
           "descricao": "Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Si num tem leite então bota uma pinga aí cumpadi!"
@@ -156,7 +156,7 @@
           "id": 5,
           "nome": "Controle e console MMM",
           "valor": "R$ 60,00",
-          "imagem": "https://raw.githubusercontent.com/WSantos79/AluraGeek/23f8369f1a1e0648b2cbce08ae48c007bd1b7998/src/assets/images/produtos/diversos/six.svg",
+          "imagem": "https://github.com/WSantos79/AluraGeek/blob/main/src/assets/images/produtos/diversos/six.webp?raw=true",
           "descricao": "A ordem dos tratores não altera o pão duris. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Per aumento de cachacis, eu reclamis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis."
         }
       ] 

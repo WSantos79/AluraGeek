@@ -89,7 +89,7 @@ export const Categoria = styled.div`
   @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);
     
-  & > section:nth-child(n+3){
+  & > section:nth-child(n+5){
     display: none;
   }
   }

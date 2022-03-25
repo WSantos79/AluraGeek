@@ -2,27 +2,9 @@ import React from "react";
 import appConfig from "../../config.json";
 import {
   Section,
-  Div as DivCategoria,
-  H1,
-  Categoria,
-  Foto as FotoMenor,
-  NomeProduto,
-  Valor,
-  VerProduto,
-  Ver,
-  Produto,
-} from "../UI/index";
+  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  Ver,  Produto,} from "../UI/index";
 import {
-  Container,
-  ProdutoDestaq,
-  Foto,
-  Span,
-  SpanUm,
-  Div,
-  Nome,
-  Preco,
-  Descricao,
-} from "./styles";
+  Container,  ProdutoDestaq,  Foto, Preco, Descricao, Nome, Div} from "./styles";
 import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { scrollToTop } from "../UI/Variaveis";
@@ -36,28 +18,12 @@ export default () => {
     scrollToTop();
   }, [produto, categoria]);
 
-  /*
-<Foto
-            style={{
-              background: `center / cover no-repeat url("${appConfig.categorias[categoria].produtos[produto].imagem}")`,
-              backgroundRepeat: `no-repeat`,
-              backgroundSize: `cover`,
-            }}
-          ></Foto>
-
-
-*/
+  
   return (
     <>
       <Container>
-        <ProdutoDestaq>
-          
-            
-              <Foto
-                src={appConfig.categorias[categoria].produtos[produto].imagem}
-              ></Foto>
-            
-          
+        <ProdutoDestaq>                
+          <Foto src={appConfig.categorias[categoria].produtos[produto].imagem}></Foto>
           <Div>
             <Nome>
               {appConfig.categorias[categoria].produtos[produto].nome}

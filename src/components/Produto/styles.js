@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { corTextoPrimario, corFundo } from "../UI/Variaveis";
+import { Categoria } from "../UI";
 
 export const Container = styled.div`
   padding: 4rem 0 4rem 0;
@@ -53,17 +54,13 @@ export const Foto = styled.div`
 */
 export const Foto = styled.img`
   width: 560px;
-  height: 403px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
-  & > img:first-child {
-    width: max-content;
-  }
-
+  height: 403px;  
+  object-fit: cover; 
+  object-position: center;
   @media (max-width: 480px) {
     width: 100%;
-    height: 192px;
+    height: 230px;
+    
   }
   @media (min-width: 481px) and (max-width: 1080px) {
     width: 254px;
