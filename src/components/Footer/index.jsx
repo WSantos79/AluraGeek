@@ -6,8 +6,7 @@ import Email from "../../assets/images/gmailDark.svg"
 
 export default () => {
     return (
-      <>  
-      
+      <>     
         <Footer>
           <p>©2022 | Desenvolvido com <Span>&#10084;</Span> por Wellington Santos</p>
   

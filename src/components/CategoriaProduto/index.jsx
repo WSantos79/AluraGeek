@@ -1,13 +1,13 @@
 import Right from "../../assets/images/right.svg";
 import appConfig from "../../config.json";
 import {
-  Section,  Div,  H1,  VerTudo,  A,  Categoria,  Foto,  NomeProduto,  Valor,  VerProduto,  Ver,  Produto,} from "../UI/index";
+  Section,  Div,  H1,  VerTudo, Categoria,  Foto,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
 import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { Link } from "react-router-dom";
 
 export default () => {
-  const { setProduto, setCategoria } = useContext(ProdutoContext);
+  const { setProduto, setCategoria} = useContext(ProdutoContext);
   return (
     <>
       {appConfig.categorias.map((categoria) => {
@@ -16,7 +16,12 @@ export default () => {
             <Div>
               <H1>{categoria.nome}</H1>
               <VerTudo>
-                <A href="#">Ver tudo</A>
+                <A 
+                onClick={() => {
+                  setCategoria(categoria.produtos[0].categoria);
+                }}
+                to={`/produtos/categoria`}
+                >Ver tudo</A>
                 <img src={Right} />
               </VerTudo>
             </Div>
@@ -27,14 +32,13 @@ export default () => {
                     onClick={() => {
                       setCategoria(produto.categoria);
                       setProduto(produto.id);
-                    }}
-                  >
+                    }}>
                     <Link to="/produto">
                       <Foto src={produto.imagem}></Foto>
                       <NomeProduto>{produto.nome}</NomeProduto>
                       <Valor>{produto.valor}</Valor>
                       <VerProduto>
-                        <Ver href="#">Ver produto</Ver>
+                        <A to="/produto">Ver produto</A>
                       </VerProduto>
                     </Link>
                   </Produto>

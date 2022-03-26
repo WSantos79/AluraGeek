@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { corTextoInput, corTextoPrimario, margimPagina } from "../UI/Variaveis";
+import { corTextoPrimario, margimPagina } from "../UI/Variaveis";
 
 export const Section = styled.section`
   width: 100%;
@@ -72,67 +72,5 @@ export const Link = styled.a`
 
     &:hover {
       text-decoration: underline;
-    }
-`
-
-export const Fieldset = styled.fieldset`
-  border: none;  
-`;
-
-export const Nome = styled.input`
-  font-size: 1rem;
-  color: ${corTextoPrimario};
-  margin: 0.5rem 0 1rem 0;
-  display: flex;
-  align-items: center;
-
-  border-radius: 4px;
-  padding: 28px 0 8px 12px;
-  width: 560px;
-
-  border: none;
-  border-bottom: 1px solid #c8c8c8;
- 
-  &::placeholder {
-    font-size: 1rem;    
-  }
-
-  @media (max-width: 480px) {
-    width: 328px;
-  }
-
-  @media (min-width: 481px) and (max-width: 1080px) {
-    width: 434px;
-  }
-`;
-export const LabelNome = styled.label`
-  position: absolute;
-  margin: 0.5rem 0 0 12px;
-  color: ${corTextoInput};
-  font-size: 12px;
-`;
-
-export const Mensagem = styled.textarea`
-    font-size: 1rem;
-    border-radius: 4px;
-    resize: none;
-    border: none;
-    border-bottom: 1px solid #c8c8c8;
-    padding: 1rem 0 0 12px;
-    margin-bottom: 0.5rem;
-    height: 82px;
-    width: 560px;
-
-    &::placeholder {
-        font-size: 1rem;
-        color: ${corTextoInput};
-    }
-
-    @media (max-width: 480px) {
-      width: 328px;
-    }
-
-    @media (min-width: 481px) and (max-width: 1080px) {
-      width: 434px;
     }
 `

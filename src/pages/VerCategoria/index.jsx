@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../../components/Header";
 import SobreEmpresa from "../../components/SobreEmpresa";
 import Footer from "../../components/Footer";
-import Login from "../../components/Login";
+import VerTodaCategoria from "../../components/VerTodaCategoria";
 
 export default () => {
   return (
     <>
-    <Header />      
-      <Login />
+      <Header />  
+      <VerTodaCategoria />
       <SobreEmpresa />
       <Footer />
     </>

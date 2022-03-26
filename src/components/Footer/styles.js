@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { brancoFundo } from "../UI/Variaveis";
 
 export const Footer = styled.footer`
 display:flex;
@@ -9,6 +10,7 @@ text-align: center;
 font-weight: 500;
 font-size: 1rem;
 color: #464646;
+background: ${brancoFundo};
 
 width: 100%;
 height: 102px;

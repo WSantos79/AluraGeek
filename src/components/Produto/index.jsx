@@ -1,24 +1,16 @@
 import React from "react";
 import appConfig from "../../config.json";
 import {
-  Section,
-  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  Ver,  Produto,} from "../UI/index";
+  Section, Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
 import {
   Container,  ProdutoDestaq,  Foto, Preco, Descricao, Nome, Div} from "./styles";
 import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
-import { scrollToTop } from "../UI/Variaveis";
-import { useEffect } from "react";
 
 export default () => {
-  const { produto, categoria, setProduto, setCategoria } =
-    useContext(ProdutoContext);
+  const { produto, categoria, setProduto, setCategoria } = useContext(ProdutoContext);  
+  window.scrollTo(0, 0); 
 
-  useEffect(() => {
-    scrollToTop();
-  }, [produto, categoria]);
-
-  
   return (
     <>
       <Container>
@@ -42,12 +34,12 @@ export default () => {
         <DivCategoria>
           <H1>Produtos similares</H1>
         </DivCategoria>
-        <Categoria>
-          {appConfig.categorias[categoria].produtos.slice(0, 6).map((item) => {
+        <Categoria>      
+          {appConfig.categorias[categoria].produtos.slice(produto < 6 ? 6 : 0, produto < 6 ? 12 : 6).map((item) => {
             return (
               <Produto
                 key={item.id}
-                onClick={() => {
+                onClick={() => {  
                   setCategoria(item.categoria);
                   setProduto(item.id);
                 }}
@@ -56,7 +48,7 @@ export default () => {
                 <NomeProduto>{item.nome}</NomeProduto>
                 <Valor>{item.valor}</Valor>
                 <VerProduto>
-                  <Ver href="#">Ver produto</Ver>
+                  <A to={`#`}>Ver produto</A>
                 </VerProduto>
               </Produto>
             );

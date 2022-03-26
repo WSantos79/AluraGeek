@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-import { BotaoPrimario } from "../UI";
-import { Container, Section, Logo, Item, Link, LastItem, Fieldset, LabelNome, Nome, Mensagem } from "./styles";
+import { BotaoPrimario, Label, Input, Fieldset, Mensagem } from "../UI";
+import { Container, Section, Logo, Item, Link, LastItem } from "./styles";
 
 export default () => {
   return (
@@ -22,10 +22,10 @@ export default () => {
           <form>
             <Fieldset>
               <legend>Fale conosco</legend>
-              <LabelNome htmlFor="name" aria-label="Digite seu nome">
+              <Label htmlFor="name" aria-label="Digite seu nome">
                 Nome
-              </LabelNome>
-              <Nome id="name" type="text" required/>
+              </Label>
+              <Input id="name" type="text" required/>
               <Mensagem placeholder="Escreva sua mensagem" required/>
             </Fieldset>
             <BotaoPrimario type="submit">Enviar mensagem</BotaoPrimario>

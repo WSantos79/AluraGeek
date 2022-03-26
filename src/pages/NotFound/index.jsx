@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../../components/Header";
 import SobreEmpresa from "../../components/SobreEmpresa";
 import Footer from "../../components/Footer";
-import Login from "../../components/Login";
+import { H1 } from "./styles";
 
 export default () => {
   return (
     <>
     <Header />      
-      <Login />
+      <H1>Página não encontrada.</H1>
       <SobreEmpresa />
       <Footer />
     </>

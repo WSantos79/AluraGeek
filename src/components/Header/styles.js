@@ -1,15 +1,26 @@
 import styled from "styled-components";
 import search from "../../assets/images/search.svg";
-import { corTextoInput, corFundo } from "../UI/Variaveis";
+import { corTextoInput, corFundo, brancoFundo } from "../UI/Variaveis";
 import { margimPagina } from "../UI/Variaveis";
-import { Link } from "react-router-dom";
 
+export const Container = styled.div`
+  background: ${brancoFundo};
+  width: 100%;
+  height: 115px;
+  
+  display: flex;
+  
+  @media (max-width: 1080px) {
+    height: 72px;
+  }
+`
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   margin: 2rem ${margimPagina};
-
+  
   & > a {
     text-decoration: none;
     color: #2a7ae4;
@@ -25,14 +36,14 @@ export const Header = styled.header`
 `;
 export const Div = styled.div`
     display: flex;
-    align-items: center;    
+    align-items: center; 
     
 `
 export const Logo = styled.img`
   width: 176px;
   
 @media (max-width: 1080px) {  
-      width: 150px;
+      width: 140px;
 
       visibility: visible;
       opacity: 1;
@@ -74,39 +85,7 @@ export const Busca = styled.input`
     background-repeat: no-repeat;
   }
 `;
-export const Login = styled(Link)`  
-  padding: 1rem 70px;
- 
-  background: #ffffff;
-  border: 1px solid #2a7ae4;
-  color: #2a7ae4;
-  box-sizing: border-box;
 
-  
-
-  font-size: 1rem;
-  transition-duration: 300ms;  
-  transition-timing-function: ease-out;
-
-  &:hover {
-      transition: opacity .5s linear;
-      background: #d4e4fa;
-      cursor: pointer;
-  }
-
-  @media (max-width: 480px) {
-    padding: 12px 47.5px;
-    font-size: 14px;
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: opacity 600ms, visibility 600ms;
-    transition: opacity 600ms, visibility 600ms;
-}
-  @media (min-width: 481px) and (max-width: 1080px) {
-    padding: 12px 64px;
-    font-size: 14px;
-}
-`
 export const IconBusca = styled.img`
     display: none;
     width: 20px;
