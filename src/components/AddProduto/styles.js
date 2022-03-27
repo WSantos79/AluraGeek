@@ -62,8 +62,7 @@ export const Div = styled.div`
     margin-bottom: 1rem;
 
     @media (max-width: 480px) {
-        width:100%;
-        margin: 0;
+        width:100%;        
     }
 
     & > span {
@@ -82,34 +81,34 @@ export const Div = styled.div`
 `
 
 export const ArrastaImg = styled.div`
-width: 282px;
-height: 152px;
-background: ${brancoFundo} url(${imagem}) center 2rem no-repeat;
-outline: 1px dashed #C8C8C8;
+    width: 282px;
+    height: 152px;
+    background: ${brancoFundo} url(${imagem}) center 2rem no-repeat;
+    outline: 2px dashed #C8C8C8;
+    
 
-display: flex;
-text-align: center;
+    display: flex;
+    text-align: center;
 
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #6B6B6B;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6B6B6B;
 
-
-@media (max-width: 480px) {
-    width: 100%;
-    margin: 0;
-    background: ${brancoFundo} url(${mais}) center 2rem no-repeat;
-}
-
-&:after {
-    padding: 80px 2rem 2rem 2rem;
-    content: 'Arraste para adicionar uma imagem para o produto';
 
     @media (max-width: 480px) {
-        padding: 81px 1rem 1rem 1rem;
+        width: 100%;
+        background: ${brancoFundo} url(${mais}) center 2rem no-repeat;
     }
- }
+
+    &:after {
+        padding: 80px 2rem 2rem 2rem;
+        content: 'Arraste para adicionar uma imagem para o produto';
+
+        @media (max-width: 480px) {
+            padding: 81px 1rem 1rem 1rem;
+        }
+    }
 
 `
 export const Adicionar = styled(BotaoPrimario)`
@@ -158,7 +157,7 @@ export const InputDisable = styled.input`
 `
 
 export const InputDois = styled(Input)`
-    width: 100%;
+    width: 100%;   
 `
 
 export const MensagemDois = styled(Mensagem)`

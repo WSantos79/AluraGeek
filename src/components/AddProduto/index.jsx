@@ -17,14 +17,12 @@ export default () => {
                         <InputDisable type="file" id="procurar" accept="image/*" />
                     </Div>
 
-                    <Label htmlFor="name" aria-label="Digite o nome do Produto">
-                    Nome do produto
-                    </Label>
-                    <InputDois id="name" type="text" required/>
-                    <Label htmlFor="valor" aria-label="Digite o valor do Produto">
-                    Preço do produto
-                    </Label>              
+                    <Label htmlFor="nomeproduto" aria-label="Digite o nome do Produto">Nome do produto</Label>
+                    <InputDois id="nomeproduto" type="text" required/>
+
+                    <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
                     <InputDois id="valor" type="number" min="1" step="any" required/>
+
                     <MensagemDois placeholder="Descrição do produto" required/>   
                 </Fieldset>
                 <Adicionar type="submit">Adicionar produto</Adicionar>

@@ -24,8 +24,14 @@ export const Form = styled.fieldset`
   & > fieldset:first-child {
     border: none;
     display: flex;
-    flex-direction: column;    
-  }
+    flex-direction: column;
+
+    & > a:last-child{
+      @media (max-width: 1080px) {
+        margin: 0 auto;
+      }
+    }
+  } 
 `;
 
 export const Legenda = styled.legend`
@@ -50,6 +56,10 @@ export const Input = styled.input`
   border: none;
   border-bottom: 1px solid #c8c8c8;
 
+  &:focus {
+    outline: 1px solid #c8c8c8;
+  }
+
   &::placeholder {
     font-size: 1rem;
   }
@@ -70,13 +80,13 @@ export const Input = styled.input`
 export const Entrar = styled(BotaoPrimario)`
   padding: 20.5px 185.5px;
   align-self: center;
-
+  
   & > a {
     text-decoration: none;
     color: #FFFFFF;
   }
 
   @media (max-width: 1080px) {
-    padding: 12px 34px;
+    padding: 12px 34px;    
   }
 `;
