@@ -17,7 +17,7 @@ function Router() {
             <ProdutoProvider>
                 <Routes>
                     <Route exact path="*" element={<NotFound />} />    
-                    <Route exact path="Home" element={<Home />} />
+                    <Route exact path="/" element={<Home />} />
                     <Route exact path="/produto" element={<Produto />} />
                     <Route exact path="/login" element={<Login />} />        
                     <Route exact path="/produto/home" element={<ProdutoAdm />} />

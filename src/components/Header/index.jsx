@@ -13,7 +13,7 @@ export default () => {
       <Container> 
         <Header data-header>
           <Div>
-            <Link to="/Home">
+            <Link to="/">
               <Logo data-logo src={logo} alt="Logo do site Alura Geek"></Logo>
             </Link>
             <Busca

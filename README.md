@@ -2,7 +2,7 @@
 
 ## :mag: Veja o projeto online !
 
-:link: https://alura-geek-commerce.vercel.app/Home
+:link: https://geek-commerce.vercel.app/
 
 <br>
 <p align="center">
