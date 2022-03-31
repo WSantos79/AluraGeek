@@ -2,6 +2,7 @@
   "name": "alura-geek",
   "version": "0.1.0",
   "description": "Alura Geek",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
