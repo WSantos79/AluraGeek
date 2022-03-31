@@ -14,16 +14,16 @@ function Router() {
     return (
         <BrowserRouter>
             <GlobalStyle />
-            <ProdutoProvider>
+            <ProdutoProvider>                
                 <Routes>
-                    <Route exact path="*" element={<NotFound />} />    
+                    <Route exact path="*" element={<NotFound />} />
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/produto" element={<Produto />} />
-                    <Route exact path="/login" element={<Login />} />        
+                    <Route exact path="/login" element={<Login />} />
                     <Route exact path="/produto/home" element={<ProdutoAdm />} />
-                    <Route exact path="/produtos/categoria" element={<VerCategoria />} /> 
-                    <Route exact path="/produto/add" element={<AddProduto />} />    
-                </Routes>
+                    <Route exact path="/produtos/categoria" element={<VerCategoria />} />
+                    <Route exact path="/produto/add" element={<AddProduto />} />
+                </Routes>                
             </ProdutoProvider>
         </BrowserRouter >
     );

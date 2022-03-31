@@ -4,9 +4,8 @@ import { Banner, Conteudo, H1, H2 } from "./styles";
 
 export default () => {
 
-  
   return (
-    <>
+    <>  
       <Banner>
         <Conteudo>
           <H1>Dezembro Promocional</H1>

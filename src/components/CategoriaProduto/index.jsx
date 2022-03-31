@@ -5,11 +5,21 @@ import {
 import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { Link } from "react-router-dom";
+import { getCategorias, getProdutosPorCateg, testeDois } from "../../service/api";
+import { useEffect } from "react";
 
 export default () => {
-  const { setProduto, setCategoria} = useContext(ProdutoContext);
+  getCategorias();
+  
+  getCategorias();
+  
+  
+
+  const { setProduto, setCategoria} = useContext(ProdutoContext); 
   return (
     <>
+      
+
       {appConfig.categorias.map((categoria) => {
         return (
           <Section key={categoria.nome}>
