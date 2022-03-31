@@ -22,7 +22,7 @@
   "author": "Wellington Santos - WSantos79",
   "license": "MIT",
   "scripts": {
-    "start": "yarn server",
+    "start": "npm run server",
     "build": "CI=False && react-scripts build",
     "server": "node ./server.js",
     "test": "react-scripts test",
