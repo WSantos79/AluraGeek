@@ -36,7 +36,7 @@ Em construção...
 + Primeiro, é necessário ter o node instalado.
 + Clone este repositório.
 + Execute `npm install` para instalar as dependências.
-+ Execute `npm start` para rodar o projeto.
++ Execute `npm run dev` para rodar o projeto.
 
 ## :smiley: Autor
 

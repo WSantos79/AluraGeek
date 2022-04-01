@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import appConfig from "../../config.json";
-import {
-  Section, Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
-import {
-  Container,  ProdutoDestaq,  Foto, Preco, Descricao, Nome, Div} from "./styles";
-import { useContext } from "react";
+import {  Section,  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
+import {  Container,  ProdutoDestaq,  Foto,  Preco,  Descricao,  Nome,  Div,} from "./styles";
+
 import { ProdutoContext } from "../../common/context/produto";
+import { getProdutosSimilares, getShowProduto } from "../../service/api";
 
 export default () => {
-  const { produto, categoria, setProduto, setCategoria } = useContext(ProdutoContext);  
-  window.scrollTo(0, 0); 
+  const { produto, categoria, setProduto, setCategoria } = useContext(ProdutoContext);
+  const [similares, setSimilares] = useState('');
+  const [page, setPage] = useState(true);
 
+  const togglePage = () => {
+    setPage((page) => !page)
+  }
+
+  window.scrollTo(0, 0);
+
+  useEffect(() => {
+    getProdutosSimilares(produto.categoria_id, setSimilares, page ? 2 : 1);
+  }, [produto]);
+  
   return (
     <>
       <Container>
-        <ProdutoDestaq>                
-          <Foto src={appConfig.categorias[categoria].produtos[produto].imagem}></Foto>
+        <ProdutoDestaq>
+          <Foto src={produto.imagem}></Foto>
           <Div>
-            <Nome>
-              {appConfig.categorias[categoria].produtos[produto].nome}
-            </Nome>
-            <Preco>
-              {appConfig.categorias[categoria].produtos[produto].valor}
-            </Preco>
-            <Descricao>
-              {appConfig.categorias[categoria].produtos[produto].descricao}
-            </Descricao>
+            <Nome>{produto.nome}</Nome>
+            <Preco>{produto.valor}</Preco>
+            <Descricao>{produto.descricao}</Descricao>
           </Div>
         </ProdutoDestaq>
       </Container>
@@ -34,25 +38,29 @@ export default () => {
         <DivCategoria>
           <H1>Produtos similares</H1>
         </DivCategoria>
-        <Categoria>      
-          {appConfig.categorias[categoria].produtos.slice(produto < 6 ? 6 : 0, produto < 6 ? 12 : 6).map((item) => {
-            return (
-              <Produto
-                key={item.id}
-                onClick={() => {  
-                  setCategoria(item.categoria);
-                  setProduto(item.id);
-                }}
-              >
-                <FotoMenor src={item.imagem}></FotoMenor>
-                <NomeProduto>{item.nome}</NomeProduto>
-                <Valor>{item.valor}</Valor>
-                <VerProduto>
-                  <A to={`#`}>Ver produto</A>
-                </VerProduto>
-              </Produto>
-            );
-          })}
+        <Categoria>
+          {similares.length && (
+            <>
+              {similares.map((item) => {
+                return (
+                  <Produto
+                    key={item.id}
+                    onClick={() => {
+                      getShowProduto(item.id, setProduto);
+                      togglePage();
+                    }}
+                  >
+                    <FotoMenor src={item.imagem}></FotoMenor>
+                    <NomeProduto>{item.nome}</NomeProduto>
+                    <Valor>{item.valor}</Valor>
+                    <VerProduto>
+                      <A to={`#`}>Ver produto</A>
+                    </VerProduto>
+                  </Produto>
+                );
+              })}
+            </>
+          )}
         </Categoria>
       </Section>
     </>
