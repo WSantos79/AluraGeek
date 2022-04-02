@@ -4,6 +4,26 @@ export const api = axios.create({
   baseURL: 'https://api-commerce-geek.herokuapp.com'
 });
 
+// funçao de busca de produtos por palavra
+export const getBusca = async(digitado, setProduto, setIsFound) => {
+  await api.get(`/produtos?nome=${digitado}`)
+    .then(function (response) {
+      if (response.data.length > 0) {
+        setProduto(response.data[0]);        
+        setIsFound(true); // informando q achou
+      } else {
+        setIsFound(false);
+        alert('Produto não encontrado!')        
+      } 
+    })
+    .catch(function (error) {
+      setIsFound(false);
+      console.error(error);
+      alert('Produto não encontrado!')
+    });
+}
+
+
 // pegar produtos para exibir em produtos similares
 export const getProdutosSimilares = async (categoriaID, setSimilares, page) => {
   

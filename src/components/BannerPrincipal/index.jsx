@@ -10,7 +10,7 @@ export default () => {
         <Conteudo>
           <H1>Dezembro Promocional</H1>
           <H2>Produtos selecionados com 33% de desconto</H2>
-          <BotaoPrimario>Ver Consoles</BotaoPrimario>
+          <a href="#Consoles"><BotaoPrimario>Ver Consoles</BotaoPrimario></a>
         </Conteudo>        
       </Banner>
     </>

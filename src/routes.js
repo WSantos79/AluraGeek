@@ -8,23 +8,29 @@ import ProdutoAdm from "./pages/ProdutoVendedor";
 import VerCategoria from "./pages/VerCategoria";
 import AddProduto from "./pages/AddProduto";
 import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
+import SobreEmpresa from "./components/SobreEmpresa";
+import Footer from "./components/Footer";
 
 function Router() {
     
     return (
         <BrowserRouter>
             <GlobalStyle />
-            <ProdutoProvider>                
+            <ProdutoProvider>  
+            <Header/>              
                 <Routes>
-                    <Route exact path="*" element={<NotFound />} />
-                    <Route exact path="/" element={<Home />} />
-                    <Route exact path="/produto" element={<Produto />} />
-                    <Route exact path="/login" element={<Login />} />
-                    <Route exact path="/produto/home" element={<ProdutoAdm />} />
-                    <Route exact path="/produtos/categoria" element={<VerCategoria />} />
-                    <Route exact path="/produto/add" element={<AddProduto />} />
-                </Routes>                
+                    <Route path="*" element={<NotFound />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/produto" element={<Produto />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/produto/home" element={<ProdutoAdm />} />
+                    <Route path="/produtos/categoria" element={<VerCategoria />} />
+                    <Route path="/produto/add" element={<AddProduto />} />
+                </Routes> 
             </ProdutoProvider>
+            <SobreEmpresa/>
+            <Footer/>                   
         </BrowserRouter >
     );
 }

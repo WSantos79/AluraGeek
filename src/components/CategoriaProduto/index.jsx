@@ -21,7 +21,7 @@ export default () => {
         <>
           {allCategorias.map((categoria) => {
             return (
-              <Section key={categoria.id}>
+              <Section key={categoria.id} id={categoria.nome}>
                 <Div>
                   <H1>{categoria.nome}</H1>
                   <VerTudo>
@@ -52,7 +52,7 @@ export default () => {
                                 getShowProduto(produto.id, setProduto);
                               }}
                             >
-                              <Link to="/produto">
+                              <Link to={`/produto?${produto.nome.replace(/\s/g, '')}`}>
                                 <Foto src={produto.imagem}></Foto>
                                 <NomeProduto>{produto.nome}</NomeProduto>
                                 <Valor>{produto.valor}</Valor>

@@ -13,7 +13,7 @@ export default () => {
   const togglePage = () => {
     setPage((page) => !page)
   }
-
+  
   window.scrollTo(0, 0);
 
   useEffect(() => {
@@ -49,9 +49,11 @@ export default () => {
                       togglePage();
                     }}
                   >
-                    <FotoMenor src={item.imagem}></FotoMenor>
-                    <NomeProduto>{item.nome}</NomeProduto>
-                    <Valor>{item.valor}</Valor>
+                    <A to={`#`}> 
+                      <FotoMenor src={item.imagem}></FotoMenor>
+                      <NomeProduto>{item.nome}</NomeProduto>
+                      <Valor>{item.valor}</Valor>
+                    </A>
                     <VerProduto>
                       <A to={`#`}>Ver produto</A>
                     </VerProduto>
