@@ -1,28 +1,14 @@
 import Right from "../../assets/images/right.svg";
-import appConfig from "../../config.json";
-import {
-  Section,
-  Div,
-  H1,
-  VerTudo,
-  Categoria,
-  Foto,
-  NomeProduto,
-  Valor,
-  VerProduto,
-  A,
-  Produto,
-} from "../UI/index";
+import {  Section,  Div,  H1,  VerTudo,  Categoria,  Foto,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
 import { useContext, useState, useEffect } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { Link } from "react-router-dom";
-import { getCategorias, getProdutosHome, getShowProduto } from "../../service/api";
+import { getCategorias, getProdutosHome, getShowProduto, getAllProdCateg } from "../../service/api";
 
 export default () => {
-  const [homeProdutos, setHomeProdutos] = useState("");
+  const [homeProdutos, setHomeProdutos] = useState('');
 
-  const { setProduto, setCategoria, allCategorias, setAllCategorias } =
-    useContext(ProdutoContext);
+  const { setProduto, setCategoria, allCategorias, setAllCategorias } = useContext(ProdutoContext);
 
   useEffect(() => {
     getCategorias(setAllCategorias);
@@ -41,7 +27,7 @@ export default () => {
                   <VerTudo>
                     <A
                       onClick={() => {
-                        setCategoria(categoria.produtos[0].categoria);
+                        getAllProdCateg(categoria.id, categoria.nome, setCategoria);
                       }}
                       to={`/produtos/categoria`}
                     >

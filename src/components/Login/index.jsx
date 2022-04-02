@@ -16,7 +16,7 @@ export default () => {
               placeholder="Escreva sua senha"
             ></Input>
            <Link to="/produto/home"><Entrar>Entrar</Entrar></Link>
-          </fieldset>          
+          </fieldset>
         </Form>
       </Container>
         

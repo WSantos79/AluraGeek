@@ -302,5 +302,13 @@
       "id": 3,
       "nome": "Diversos"
     }
+  ],
+  "users": [
+    {
+      "name": "Wellington Santos",
+      "email": "wellingtonsantos7799@gmail.com",
+      "isLogged": "false",
+      "isAdmin": "true"
+    }
   ]
 }

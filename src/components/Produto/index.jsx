@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from "react";
-import appConfig from "../../config.json";
 import {  Section,  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
 import {  Container,  ProdutoDestaq,  Foto,  Preco,  Descricao,  Nome,  Div,} from "./styles";
 
@@ -7,7 +6,7 @@ import { ProdutoContext } from "../../common/context/produto";
 import { getProdutosSimilares, getShowProduto } from "../../service/api";
 
 export default () => {
-  const { produto, categoria, setProduto, setCategoria } = useContext(ProdutoContext);
+  const { produto, setProduto } = useContext(ProdutoContext);
   const [similares, setSimilares] = useState('');
   const [page, setPage] = useState(true);
 

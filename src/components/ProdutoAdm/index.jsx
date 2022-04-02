@@ -1,6 +1,4 @@
-import appConfig from "../../config.json";
-import {
-  Section,  H1,  NomeProduto,  Valor,  Lista,  BotaoPrimario,} from "../UI/index";
+import { Section,  H1,  NomeProduto,  Valor,  Lista,  BotaoPrimario,} from "../UI/index";
 import { ProdutoHome, Imagem, Delet, Edit, FotoProduto, Div } from "./styles";
 import Trash from "../../assets/images/trash.png";
 import Change from "../../assets/images/edit.png";
@@ -9,7 +7,7 @@ import { useState, useEffect } from "react";
 import { getAllProdudos } from "../../service/api";
 
 export default () => {
-  const [allProdutos, setAllProdutos] = useState("");
+  const [allProdutos, setAllProdutos] = useState('');
 
   useEffect(() => {
     getAllProdudos(setAllProdutos);

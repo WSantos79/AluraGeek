@@ -19,7 +19,7 @@ export const getProdutosSimilares = async (categoriaID, setSimilares, page) => {
 
 // pegar os 6 primeiros produtos de cada categoria para exibir na home
 export const getProdutosHome = async (setHomeProdutos) => {
-  var newArray = [];
+  let newArray;
   await api.get(`/produtos/?categoria_id=1&_limit=6`)
     .then(function (response) {
       newArray = response.data;
@@ -44,8 +44,6 @@ export const getProdutosHome = async (setHomeProdutos) => {
     .catch(function (error) {
       console.error(error);
     });
-
-
 }
 
 // pegar as 3 primeiras categorias para mostrar na home
@@ -76,6 +74,17 @@ export const getShowProduto = async (idProduto, setProduto) => {
   await api.get(`/produtos/${idProduto}`)
     .then(function (response) {
       setProduto(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
+
+// mostrar todos os produto de uma determinada categoria
+export const getAllProdCateg = async (id, nome, setCategoria) => {
+  await api.get(`/produtos/?categoria_id=${id}`)
+    .then(function (response) {
+      setCategoria([nome, response.data]);
     })
     .catch(function (error) {
       console.error(error);

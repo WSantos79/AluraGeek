@@ -86,30 +86,31 @@ export const ArrastaImg = styled.div`
     background: ${brancoFundo} url(${imagem}) center 2rem no-repeat;
     outline: 2px dashed #C8C8C8;
     
-
-    display: flex;
+    display: flex;    
     text-align: center;
+    align-items: center;  
+    justify-content: center;
 
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #6B6B6B;
-
+    
+    &:after {
+        padding: 80px 2rem 2rem 2rem;
+        content: 'Arraste para adicionar uma imagem para o produto';       
+    }
 
     @media (max-width: 480px) {
         width: 100%;
+        height: 134px;
         background: ${brancoFundo} url(${mais}) center 2rem no-repeat;
-    }
 
-    &:after {
-        padding: 80px 2rem 2rem 2rem;
-        content: 'Arraste para adicionar uma imagem para o produto';
-
-        @media (max-width: 480px) {
-            padding: 81px 1rem 1rem 1rem;
+        &:after {           
+            //padding: 81px 3em 2rem 3em;
+            content: 'Adicionar uma imagem para o produto';
         }
     }
-
 `
 export const Adicionar = styled(BotaoPrimario)`
     width: 100%;
