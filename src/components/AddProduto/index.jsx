@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form } from "./styles";
+import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney } from "./styles";
 import { Label, Fieldset } from "../../styles";
+import { currencyConfig } from "./funcao";
 
 export default () => {
     return (
@@ -9,7 +10,6 @@ export default () => {
             <Form>
                 <Fieldset>
                     <Legend>Adicionar novo produto</Legend>             
-
                     <Div>
                         <ArrastaImg />
                         <span>Ou</span>
@@ -18,12 +18,12 @@ export default () => {
                     </Div>
 
                     <Label htmlFor="nomeproduto" aria-label="Digite o nome do Produto">Nome do produto</Label>
-                    <InputDois id="nomeproduto" type="text" required/>
+                    <InputDois id="nomeproduto" type="text" required minLength={3}/>
 
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
-                    <InputDois id="valor" type="number" min="1" step="any" required/>
-
-                    <MensagemDois placeholder="Descrição do produto" required/>   
+                    <InputMoney data-tipo='preco' id="valor" currency="BRL" config={currencyConfig} required/>                  
+                   
+                    <MensagemDois placeholder="Descrição do produto" required minLength={5}/>                  
                 </Fieldset>
                 <Adicionar type="submit">Adicionar produto</Adicionar>
           </Form>     

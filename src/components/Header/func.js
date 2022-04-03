@@ -1,4 +1,3 @@
-
 // mostrar barra de pesquisa para mobile
 export function showSearch() {
   const busca = document.querySelector("[data-busca]");

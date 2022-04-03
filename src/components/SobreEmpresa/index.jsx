@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import { BotaoPrimario, Label, Input, Fieldset, Mensagem } from "../../styles";
 import { Container, Section, Logo, Item, Link, LastItem } from "./styles";
+import { SendEmail } from "./funcao";
 
 export default () => {
+  const [remetente,setRemetente] = useState('');
+  const [mensagem, setMensagem] = useState('');
+  const Submit = (e) => {
+    e.preventDefault();
+    SendEmail(remetente, mensagem);
+  }
   return (
     <>
       <Section>
@@ -19,14 +26,14 @@ export default () => {
             <LastItem><Link href="#">Anuncie aqui</Link></LastItem>
           </ul>
 
-          <form action="#">
+          <form onSubmit={Submit}>
             <Fieldset>
               <legend>Fale conosco</legend>
-              <Label htmlFor="name" aria-label="Digite seu nome">
-                Nome
-              </Label>
-              <Input id="name" type="text" required minLength={3}/>
-              <Mensagem placeholder="Escreva sua mensagem" required minLength={5}/>
+
+              <Label htmlFor="name" aria-label="Digite seu nome">Nome</Label>
+              <Input onChange={(e) => {setRemetente(e.target.value);}} id="name" type="text" required minLength={3}/>
+
+              <Mensagem onChange={(e) => {setMensagem(e.target.value);}} placeholder="Escreva sua mensagem" required minLength={5}/>
             </Fieldset>
             <BotaoPrimario type="submit">Enviar mensagem</BotaoPrimario>
           </form>      

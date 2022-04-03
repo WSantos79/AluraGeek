@@ -3,6 +3,7 @@ import { brancoFundo, corTextoPrimario, margimPagina } from "../../styles/Variav
 import { BotaoPrimario, Mensagem, Input } from "../../styles";
 import imagem from "../../assets/images/add-img.svg"
 import mais from "../../assets/images/mais.svg"
+import IntlCurrencyInput from "react-intl-currency-input"
 
 export const Container = styled.div`
     width: 100%;
@@ -160,7 +161,43 @@ export const InputDisable = styled.input`
 export const InputDois = styled(Input)`
     width: 100%;   
 `
+export const InputMoney = styled(IntlCurrencyInput)`
+font-size: 1rem;
+color: ${corTextoPrimario};
+margin: 0.5rem 0 1rem 0;
+display: flex;
+align-items: center;
 
+border-radius: 4px;
+padding: 28px 0 8px 12px;
+width: 560px;
+
+border: none;
+border-bottom: 1px solid #c8c8c8;
+
+&[type=number]::-webkit-inner-spin-button, 
+&[type=number]::-webkit-outer-spin-button,
+&[type=number] { 
+  -webkit-appearance: none;    
+  -moz-appearance: textfield;    
+}
+
+&:focus {
+  outline: 1px solid #c8c8c8;
+}
+
+&::placeholder {
+  font-size: 1rem;    
+}
+
+@media (max-width: 480px) {
+  width: 328px;
+}
+
+@media (min-width: 481px) and (max-width: 1080px) {
+  width: 434px;
+}
+`
 export const MensagemDois = styled(Mensagem)`
     width: 100%;
 `

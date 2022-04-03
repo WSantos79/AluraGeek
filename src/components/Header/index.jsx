@@ -9,17 +9,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { getBusca } from "../../service/api";
 import { useContext, useState } from "react";
 import { ProdutoContext } from "../../common/context/produto";
-import { valida } from "../../scripts/validacoes";
 
-export default () => {
-
-  const inputs = document.querySelectorAll('input, textarea') //exibindo msgm de erro validaçoes de formularios
-  inputs.forEach(input => {
-      input.addEventListener('blur', (e) => {
-          valida(e.target);
-      })
-  })
-
+export default () => { 
   const { setProduto } = useContext(ProdutoContext);
   const navigate = useNavigate();
   const [isFound, setIsFound] = useState(false); // informar se achou produto
