@@ -1,4 +1,4 @@
-import { Section, Div,  H1,  Lista,  Foto,  NomeProduto,  Valor,  VerProduto,  A} from "../UI/index"; 
+import { Section, Div,  H1,  Lista,  Foto,  NomeProduto,  Valor,  VerProduto,  A} from "../../styles"; 
 import { Produtos } from "./styles";
 import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";

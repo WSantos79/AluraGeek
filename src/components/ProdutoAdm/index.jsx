@@ -1,4 +1,4 @@
-import { Section,  H1,  NomeProduto,  Valor,  Lista,  BotaoPrimario,} from "../UI/index";
+import { Section,  H1,  NomeProduto,  Valor,  Lista,  BotaoPrimario,} from "../../styles";
 import { ProdutoHome, Imagem, Delet, Edit, FotoProduto, Div } from "./styles";
 import Trash from "../../assets/images/trash.png";
 import Change from "../../assets/images/edit.png";

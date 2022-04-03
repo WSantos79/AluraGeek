@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { BotaoPrimario } from "../UI";
-import { corTextoPrimario, corFundo } from "../UI/Variaveis";
+import { BotaoPrimario } from "../../styles";
+import { corTextoPrimario, corFundo } from "../../styles/Variaveis";
 
 export const Container = styled.div`
     background: ${corFundo};

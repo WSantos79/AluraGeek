@@ -1,5 +1,5 @@
 import Right from "../../assets/images/right.svg";
-import {  Section,  Div,  H1,  VerTudo,  Categoria,  Foto,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
+import {  Section,  Div,  H1,  VerTudo,  Categoria,  Foto,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../../styles";
 import { useContext, useState, useEffect } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 import { Link } from "react-router-dom";

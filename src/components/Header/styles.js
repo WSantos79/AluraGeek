@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import search from "../../assets/images/search.svg";
-import { corTextoInput, corFundo, brancoFundo } from "../UI/Variaveis";
-import { margimPagina } from "../UI/Variaveis";
+import { corTextoInput, corFundo, brancoFundo } from "../../styles/Variaveis";
+import { margimPagina } from "../../styles/Variaveis";
 
 export const Container = styled.div`
   background: ${brancoFundo};
@@ -51,7 +51,11 @@ export const Logo = styled.img`
       transition: opacity 600ms, visibility 600ms;
 }
 `
-
+export const ContainerBusca = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;  
+`
 export const Busca = styled.input`
   border: none;
   background: ${corFundo} 360px url(${search});
@@ -86,20 +90,30 @@ export const Busca = styled.input`
   }
 `;
 
+export const Span = styled.span`
+  position: absolute;
+  left: 30%;
+  top: 110%;
+  color: red;
+  font-size: 13px;
+
+  display: none;
+  @media (max-width: 480px) {
+    top: 102%;
+}
+`
 export const IconBusca = styled.img`
     display: none;
     width: 20px;
     cursor: pointer;
     @media (max-width: 480px) {
-        display: block;        
-        //margin-left: 10px
+        display: block;
     }
 `
 
 export const IconCancel = styled.img`
     display: none;
-    cursor: pointer;
-    //margin-left: 10px;
+    cursor: pointer;    
     align-self: center;
 `
 ;

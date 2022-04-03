@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { corTextoPrimario } from "../../components/UI/Variaveis";
+import { corTextoPrimario } from "../../styles/Variaveis";
 
 export const P = styled.p`    
     align-items: center;

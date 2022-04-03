@@ -1,6 +1,6 @@
 import React from "react";
 import { P, P2, P3, P4, P33, Div } from "./styles";
-import { BotaoPrimario } from "../../components/UI";
+import { BotaoPrimario } from "../../styles";
 import { Link } from "react-router-dom";
 
 export default () => {

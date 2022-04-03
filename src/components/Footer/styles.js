@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { brancoFundo } from "../UI/Variaveis";
+import { brancoFundo } from "../../styles/Variaveis";
 
 export const Footer = styled.footer`
 display:flex;

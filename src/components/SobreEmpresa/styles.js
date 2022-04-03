@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { corTextoPrimario, margimPagina } from "../UI/Variaveis";
+import { corTextoPrimario, margimPagina } from "../../styles/Variaveis";
 
 export const Section = styled.section`
   width: 100%;

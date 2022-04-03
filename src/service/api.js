@@ -11,15 +11,23 @@ export const getBusca = async(digitado, setProduto, setIsFound) => {
       if (response.data.length > 0) {
         setProduto(response.data[0]);        
         setIsFound(true); // informando q achou
+        console.log('acho')
       } else {
         setIsFound(false);
-        alert('Produto não encontrado!')        
+        
+        const notFound = document.querySelector("[data-found]");
+        notFound.style.display = 'block';
+
+        setTimeout(function(){
+            notFound.style.display = 'none';
+        },5000);
+
       } 
     })
     .catch(function (error) {
       setIsFound(false);
       console.error(error);
-      alert('Produto não encontrado!')
+      alert('Produto não encontrado!');
     });
 }
 

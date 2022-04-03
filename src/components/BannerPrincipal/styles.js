@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import banner from "../../assets/images/banner.jpg";
-import { margimPagina } from "../UI/Variaveis";
+import { margimPagina } from "../../styles/Variaveis";
 
 export const Banner = styled.section`
 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url(${banner}) center;

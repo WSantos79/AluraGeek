@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import {  Section,  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../UI/index";
+import {  Section,  Div as DivCategoria,  H1,  Categoria,  Foto as FotoMenor,  NomeProduto,  Valor,  VerProduto,  A,  Produto,} from "../../styles";
 import {  Container,  ProdutoDestaq,  Foto,  Preco,  Descricao,  Nome,  Div,} from "./styles";
 
 import { ProdutoContext } from "../../common/context/produto";

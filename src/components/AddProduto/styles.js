@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { brancoFundo, corTextoPrimario, margimPagina } from "../UI/Variaveis";
-import { BotaoPrimario, Mensagem, Input } from "../UI";
+import { brancoFundo, corTextoPrimario, margimPagina } from "../../styles/Variaveis";
+import { BotaoPrimario, Mensagem, Input } from "../../styles";
 import imagem from "../../assets/images/add-img.svg"
 import mais from "../../assets/images/mais.svg"
 

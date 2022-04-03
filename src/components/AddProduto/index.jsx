@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form } from "./styles";
-import { Label, Fieldset } from "../UI";
+import { Label, Fieldset } from "../../styles";
 
 export default () => {
     return (

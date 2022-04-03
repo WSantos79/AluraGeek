@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Produto, Foto } from "../UI/index";
+import { Produto, Foto } from "../../styles";
 
 export const Div = styled.div`
   display: flex;

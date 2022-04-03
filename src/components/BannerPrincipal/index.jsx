@@ -1,5 +1,5 @@
 import React from "react";
-import { BotaoPrimario } from "../UI";
+import { BotaoPrimario } from "../../styles";
 import { Banner, Conteudo, H1, H2 } from "./styles";
 
 export default () => {

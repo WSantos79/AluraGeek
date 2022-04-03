@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { corTextoPrimario, corFundo, margimPagina } from "../UI/Variaveis";
+import { corTextoPrimario, corFundo, margimPagina } from "../../styles/Variaveis";
 
 export const Container = styled.div`
   padding: 4rem 0 4rem 0;

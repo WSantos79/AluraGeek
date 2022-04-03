@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-import { BotaoPrimario, Label, Input, Fieldset, Mensagem } from "../UI";
+import { BotaoPrimario, Label, Input, Fieldset, Mensagem } from "../../styles";
 import { Container, Section, Logo, Item, Link, LastItem } from "./styles";
 
 export default () => {
@@ -19,14 +19,14 @@ export default () => {
             <LastItem><Link href="#">Anuncie aqui</Link></LastItem>
           </ul>
 
-          <form>
+          <form action="#">
             <Fieldset>
               <legend>Fale conosco</legend>
               <Label htmlFor="name" aria-label="Digite seu nome">
                 Nome
               </Label>
-              <Input id="name" type="text" required/>
-              <Mensagem placeholder="Escreva sua mensagem" required/>
+              <Input id="name" type="text" required minLength={3}/>
+              <Mensagem placeholder="Escreva sua mensagem" required minLength={5}/>
             </Fieldset>
             <BotaoPrimario type="submit">Enviar mensagem</BotaoPrimario>
           </form>      
