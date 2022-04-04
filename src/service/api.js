@@ -6,21 +6,18 @@ export const api = axios.create({
 
 // verificar usuario login
 export const getLogin = async(email, senha, setIsLogged) => {
+  console.log(email)
   await api.get(`/users?email=${email}&senha=${senha}`)
-  .then(function (response) {
-     api.put(`/users/${response.id}`, {
-      isLogged: true
-    })
-      .then(function (response) {
+    .then(function (response) {
+      if(response.data.length > 0){
         setIsLogged(true);
-      })
-      .catch(function (error) {
-        alert('usuário não encontrado');  
-      });    
-  })
-  .catch(function (error) {
-    alert('usuário não encontrado');  
-  });
+      }else{
+        alert('usuário não encontrado!');
+      }      
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 }
 
 // funçao de busca de produtos por palavra
