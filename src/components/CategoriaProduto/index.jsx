@@ -17,7 +17,7 @@ export default () => {
 
   return (
     <>
-      {allCategorias.length && (
+      {allCategorias.length > 0 && (
         <>
           {allCategorias.map((categoria) => {
             return (
@@ -37,10 +37,10 @@ export default () => {
                   </VerTudo>
                 </Div>
                 <Categoria>
-                  {homeProdutos.length && (
+                  {homeProdutos.length > 0 && (
                     <>
                       {homeProdutos
-                        .slice(
+                        .slice( // slice para exibir cada um em sua respectiva categoria
                           categoria.id === 1 ? 0 : categoria.id === 2 ? 6 : 12,
                           categoria.id === 1 ? 6 : categoria.id === 2 ? 12 : 18
                         )

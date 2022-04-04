@@ -15,7 +15,7 @@ export default () => {
           </>
       )}
 
-      {produto.length && (
+      {produto.length > 0 && (
           <Section>
               <H1>Produtos encontrados</H1>
           <Lista> 
