@@ -93,13 +93,14 @@ export const Busca = styled.input`
 export const Span = styled.span`
   position: absolute;
   left: 30%;
-  top: 110%;
+  top: 115%;
   color: red;
   font-size: 13px;
 
   display: none;
   @media (max-width: 480px) {
     top: 102%;
+    left: 20%;
 }
 `
 export const IconBusca = styled.img`

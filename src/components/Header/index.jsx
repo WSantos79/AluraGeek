@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "../../assets/images/logo.svg";
 import { Container, Header, Div, Busca,  IconBusca, IconCancel, Logo, Span, ContainerBusca } from "./styles";
 import { BotaoSecundario } from "../../styles";
@@ -12,19 +12,7 @@ import { ProdutoContext } from "../../common/context/produto";
 
 export default () => { 
   const { setProduto } = useContext(ProdutoContext);
-  const navigate = useNavigate();
-  const [isFound, setIsFound] = useState(false); // informar se achou produto
-  const [firstUpdate, setFirstUpdate] = useState(true);
-
-  useEffect(() => { // verificando se foi achado algum produto na busca para redirecionar a pag
-    if(firstUpdate) {
-      setFirstUpdate(false);
-    } else {
-      if(isFound){
-        navigate(`/produto?busca`, { message: 'Produto encontrado!' });
-      }
-    }
-  }, [isFound]);
+  const navigate = useNavigate(); 
 
   return (
     <>
@@ -48,14 +36,21 @@ export default () => {
                   if (key == 13) { // codigo da tecla enter    
                     busca.blur(); // tirando o foco
                     if (digitado.length < 4) {
-                      alert('Busque por uma palavra maior que 3 letras !');
+                      const alert = document.querySelector("[data-found]");
+                      alert.style.display = 'block';
+
+                      setTimeout(function(){
+                        alert.style.display = 'none';
+                      },5000);
                     } else {
-                      getBusca(digitado, setProduto, setIsFound)                    
+                      getBusca(digitado, setProduto);
+                      e.target.value = '';
+                      navigate(`/search`);               
                     }
-                  }                
+                  }               
                 }}           
               ></Busca>
-              <Span data-found>Produto não encontrado!</Span>
+              <Span data-found>Busque com o mínimo 3 letras</Span>
             </ContainerBusca>
           </Div>
           

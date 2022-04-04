@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import SobreEmpresa from "./components/SobreEmpresa";
 import Footer from "./components/Footer";
+import BuscaProduto from "./components/BuscaProduto";
 
 
 function Router() {
@@ -25,8 +26,9 @@ function Router() {
                     <Route path="/produto" element={<Produto />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/produto/home" element={<ProdutoAdm />} />
-                    <Route path="/produtos/categoria" element={<VerCategoria />} />
+                    <Route path="/produtos/cat" element={<VerCategoria />} />
                     <Route path="/produto/add" element={<AddProduto />} />
+                    <Route path="/search" element={<BuscaProduto/>} />
                 </Routes> 
             </ProdutoProvider>
             <SobreEmpresa/>

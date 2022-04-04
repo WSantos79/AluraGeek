@@ -17,7 +17,7 @@ export default () => {
   window.scrollTo(0, 0);
 
   useEffect(() => {
-    getProdutosSimilares(produto.categoria_id, setSimilares, page ? 2 : 1);
+    getProdutosSimilares(produto.categoria_id, setSimilares, produto.id);
   }, [produto]);
   
   return (

@@ -21,40 +21,21 @@ export const getLogin = async(email, senha, setIsLogged) => {
 }
 
 // funçao de busca de produtos por palavra
-export const getBusca = async(digitado, setProduto, setIsFound) => {
-  await api.get(`/produtos?nome=${digitado}`)
-    .then(function (response) {
-      if (response.data.length > 0) {
-        setProduto(response.data[0]);        
-        setIsFound(true); // informando q achou
-        console.log('acho')
-      } else {
-        setIsFound(false);
-        
-        const notFound = document.querySelector("[data-found]");
-        notFound.style.display = 'block';
-
-        setTimeout(function(){
-            notFound.style.display = 'none';
-        },5000);
-
-      } 
+export const getBusca = async(digitado, setProduto) => {
+  await api.get(`/produtos?q=${digitado}`)
+    .then(function (response) {      
+      setProduto(response.data);      
     })
     .catch(function (error) {
-      setIsFound(false);
-      console.error(error);
-      alert('Produto não encontrado!');
+      console.error(error);     
     });
 }
 
-
 // pegar produtos para exibir em produtos similares
-export const getProdutosSimilares = async (categoriaID, setSimilares, page) => {
-  
-  await api.get(`/produtos/?categoria_id=${categoriaID}&_page=${page}&_limit=6`)
+export const getProdutosSimilares = async (categoriaID, setSimilares, idAtual) => {  
+  await api.get(`/produtos/?categoria_id=${categoriaID}&id_ne=${idAtual}&_limit=6`)
     .then(function (response) {
-      setSimilares(response.data);
-      
+      setSimilares(response.data);      
     })
     .catch(function (error) {
       console.error(error);
@@ -101,8 +82,7 @@ export const getCategorias = async (setAllCategorias) => {
     });
 }
 
-
-// pegar todos produtos em ordem por categorias
+// pegar todos produtos em ordem por categorias para exibir na pag do Adm
 export const getAllProdudos = async (setAllProdutos) => {
   await api.get(`/produtos/?_sort=categoria_id`)
   .then(function (response) {
@@ -113,7 +93,7 @@ export const getAllProdudos = async (setAllProdutos) => {
   });
 }
 
-// mostrar produto ao clicar
+// mostrar detalhes do produto ao clicar
 export const getShowProduto = async (idProduto, setProduto) => {
   await api.get(`/produtos/${idProduto}`)
     .then(function (response) {

@@ -136,7 +136,7 @@ export const Categoria = styled.div`
 `;
 
 export const Lista = styled(Categoria)`
-    margin: 1rem 0 4rem 0;
+  margin: 1rem 0 4rem 0;
 
 @media (max-width: 1080px) {
     margin-bottom: 1rem;   

@@ -8,10 +8,10 @@ export default () => {
   const [email,setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const navigate = useNavigate();
-  const [isLogged, setIsLogged] = useState(false); // informar se achou produto
+  const [isLogged, setIsLogged] = useState(false); 
   const [firstUpdate, setFirstUpdate] = useState(true);
 
-  useEffect(() => { // verificando se foi achado algum produto na busca para redirecionar a pag
+  useEffect(() => {  // informar se o usuario e senha estao corretos e redirecionar a pag
     if(firstUpdate) {
       setFirstUpdate(false);
     } else {
