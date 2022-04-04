@@ -19,6 +19,11 @@
 
 Em construção...
 
+Para logar =>
+
+email: admin@gmail.com
+senha: Admin123
+
 
 ## :hammer: **Tecnologias**
 
