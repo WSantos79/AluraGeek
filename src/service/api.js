@@ -4,6 +4,25 @@ export const api = axios.create({
   baseURL: 'https://api-commerce-geek.herokuapp.com'
 });
 
+// verificar usuario login
+export const getLogin = async(email, senha, setIsLogged) => {
+  await api.get(`/users?email=${email}&senha=${senha}`)
+  .then(function (response) {
+     api.put(`/users/${response.id}`, {
+      isLogged: true
+    })
+      .then(function (response) {
+        setIsLogged(true);
+      })
+      .catch(function (error) {
+        alert('usuário não encontrado');  
+      });    
+  })
+  .catch(function (error) {
+    alert('usuário não encontrado');  
+  });
+}
+
 // funçao de busca de produtos por palavra
 export const getBusca = async(digitado, setProduto, setIsFound) => {
   await api.get(`/produtos?nome=${digitado}`)

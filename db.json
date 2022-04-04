@@ -306,9 +306,10 @@
   "users": [
     {
       "name": "Wellington Santos",
-      "email": "wellingtonsantos7799@gmail.com",
-      "isLogged": "false",
-      "isAdmin": "true"
+      "email": "admin@gmail.com",
+      "senha": "Admin123",
+      "isLogged": false,
+      "isAdmin": true
     }
   ]
 }

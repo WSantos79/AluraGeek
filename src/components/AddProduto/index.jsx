@@ -21,9 +21,9 @@ export default () => {
                     <InputDois id="nomeproduto" type="text" required minLength={3}/>
 
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
-                    <InputMoney data-tipo='preco' id="valor" currency="BRL" config={currencyConfig} required/>                  
+                    <InputMoney data-tipo='preco' id="valor" currency="BRL" config={currencyConfig} required/>               
                    
-                    <MensagemDois placeholder="Descrição do produto" required minLength={5}/>                  
+                    <MensagemDois placeholder="Descrição do produto" required minLength={5}/>
                 </Fieldset>
                 <Adicionar type="submit">Adicionar produto</Adicionar>
           </Form>     

@@ -18,7 +18,7 @@ export const Container = styled.div`
     
 `
 
-export const Form = styled.fieldset`
+export const Form = styled.form`
   border: none;
   
   & > fieldset:first-child {

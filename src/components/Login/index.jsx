@@ -1,25 +1,50 @@
 import React from "react";
 import { Container, Form, Legenda, Input, Entrar } from "./styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getLogin } from "../../service/api";
+import { useState, useEffect } from "react";
 
 export default () => {
+  const [email,setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const navigate = useNavigate();
+  const [isLogged, setIsLogged] = useState(false); // informar se achou produto
+  const [firstUpdate, setFirstUpdate] = useState(true);
+
+  useEffect(() => { // verificando se foi achado algum produto na busca para redirecionar a pag
+    if(firstUpdate) {
+      setFirstUpdate(false);
+    } else {
+      if(isLogged){
+        navigate(`/produto/home`);
+      }
+    }
+  }, [isLogged]);
+
+  const Submit = (e) => {
+    e.preventDefault();
+    getLogin(email, senha, setIsLogged);
+  }
+
   return (
     <>
       <Container>
-        <Form>
+        <Form onSubmit={Submit}>
           <fieldset>
             <Legenda>Iniciar Sessão</Legenda>
-            <Input type="text" required placeholder="Escreva seu email"></Input>
+            <Input onChange={(e) => {setEmail(e.target.value);}} type="email" required placeholder="Escreva seu email"></Input>
+
             <Input
               type="password"
               required
               placeholder="Escreva sua senha"
+              onChange={(e) => {setSenha(e.target.value);}}
             ></Input>
-           <Link to="/produto/home"><Entrar>Entrar</Entrar></Link>
+
           </fieldset>
-        </Form>
-      </Container>
-        
+           <Entrar type="submit">Entrar</Entrar>
+        </Form>        
+      </Container>        
     </>
   );
 };

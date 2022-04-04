@@ -7,10 +7,12 @@ import { SendEmail } from "./funcao";
 export default () => {
   const [remetente,setRemetente] = useState('');
   const [mensagem, setMensagem] = useState('');
+
   const Submit = (e) => {
     e.preventDefault();
     SendEmail(remetente, mensagem);
   }
+  
   return (
     <>
       <Section>
