@@ -17,7 +17,7 @@ export default () => {
           <H1>{categoria[0]}</H1>
         </Div>
         <Lista>
-          {categoria.length && (
+          {categoria.length > 0 && (
             <>
             {categoria[1].map((item) => {
               return (

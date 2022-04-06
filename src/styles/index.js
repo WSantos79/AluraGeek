@@ -179,8 +179,7 @@ export const VerProduto = styled(VerTudo)`
 export const Foto = styled.img`
   width: 100%;
   object-fit: cover;  
-  height: 174px;
-  
+  height: 174px;  
 `;
 
 export const NomeProduto = styled.h4`

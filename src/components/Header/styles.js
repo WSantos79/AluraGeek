@@ -101,7 +101,10 @@ export const Span = styled.span`
   @media (max-width: 480px) {
     top: 102%;
     left: 20%;
-}
+  }
+  @media (min-width: 481px) and (max-width: 1080px) {
+    top: 100%;   
+  }
 `
 export const IconBusca = styled.img`
     display: none;

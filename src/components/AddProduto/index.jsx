@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney } from "./styles";
+import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb } from "./styles";
 import { Label, Fieldset } from "../../styles";
-import { currencyConfig } from "./funcao";
+import { currencyConfig, dropHandler, dragOverHandler } from "./funcao";
+
+
 
 export default () => {
     return (
@@ -11,10 +13,16 @@ export default () => {
                 <Fieldset>
                     <Legend>Adicionar novo produto</Legend>             
                     <Div>
-                        <ArrastaImg />
+                        <ArrastaImg data-dragAndDrop 
+                        onDrop={(e) => {  dropHandler(e) }} 
+                        onDragOver={(e) => {  dragOverHandler(e) }}
+                        >
+                            <Thumb data-thumb/>
+                        </ArrastaImg>
+                        
                         <span>Ou</span>
                         <Procurar htmlFor="procurar"/>
-                        <InputDisable type="file" id="procurar" accept="image/*" />
+                        <InputDisable data-file type="file" id="procurar" accept="image/*" />
                     </Div>
 
                     <Label htmlFor="nomeproduto" aria-label="Digite o nome do Produto">Nome do produto</Label>

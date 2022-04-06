@@ -86,7 +86,8 @@ export const ArrastaImg = styled.div`
     height: 152px;
     background: ${brancoFundo} url(${imagem}) center 2rem no-repeat;
     outline: 2px dashed #C8C8C8;
-    
+    position: relative;
+
     display: flex;    
     text-align: center;
     align-items: center;  
@@ -112,6 +113,19 @@ export const ArrastaImg = styled.div`
             content: 'Adicionar uma imagem para o produto';
         }
     }
+`
+
+export const Thumb = styled.div`    
+    width: 70%;
+    height: 90%;
+
+    position: absolute;
+    display: none;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+    background-size: cover;
 `
 export const Adicionar = styled(BotaoPrimario)`
     width: 100%;
