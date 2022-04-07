@@ -1,4 +1,7 @@
 # <p align="center">:star: AluraGeek Challenge FrontEnd</p>
+<div align="center">
+ <img width="250" src="https://raw.githubusercontent.com/WSantos79/AluraGeek/6d8efb1f1654c48e1612b8c89dc05df7f02ae9dc/src/assets/images/logo.svg">
+</div>
 
 ## :mag: Veja o projeto online !
 
