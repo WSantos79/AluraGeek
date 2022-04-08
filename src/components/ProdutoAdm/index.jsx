@@ -24,7 +24,7 @@ export default () => {
         </Div>
 
         <Lista>
-          {allProdutos.length && (
+          {allProdutos.length > 0 && (
             <>
               {allProdutos.map((produto) => {
                 return (

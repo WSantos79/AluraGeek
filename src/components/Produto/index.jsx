@@ -38,7 +38,7 @@ export default () => {
           <H1>Produtos similares</H1>
         </DivCategoria>
         <Categoria>
-          {similares.length && (
+          {similares.length > 0 && (
             <>
               {similares.map((item) => {
                 return (

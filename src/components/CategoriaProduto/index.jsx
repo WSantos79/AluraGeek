@@ -29,7 +29,7 @@ export default () => {
                       onClick={() => {
                         getAllProdCateg(categoria.id, categoria.nome, setCategoria);
                       }}
-                      to={`/produtos/cat?${categoria.nome.replace(/\s/g, '').toLowerCase()}`}
+                      to={`/produtos/cat?${categoria.nome.replace(/\s/g, '+').toLowerCase()}`}
                     >
                       Ver tudo
                     </A>
@@ -52,13 +52,13 @@ export default () => {
                                 getShowProduto(produto.id, setProduto);
                               }}
                             >
-                              <Link to={`/produto?${produto.nome.replace(/\s/g, '').toLowerCase()}`}>
+                              <Link to={`/produto?${produto.nome.replace(/\s/g, '+').toLowerCase()}`}>
                                 <Foto src={produto.imagem}></Foto>
                                 <NomeProduto>{produto.nome}</NomeProduto>
                                 <Valor>{produto.valor}</Valor>
                               </Link>
                               <VerProduto>
-                                <A to="/produto">Ver produto</A>
+                                <A to={`/produto?${produto.nome.replace(/\s/g, '+').toLowerCase()}`}>Ver produto</A>
                               </VerProduto>
                             </Produto>
                           );

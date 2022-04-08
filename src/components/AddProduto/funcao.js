@@ -1,3 +1,4 @@
+
 export const currencyConfig = {
   locale: "pt-BR",
   formats: {
@@ -12,26 +13,49 @@ export const currencyConfig = {
   },
 };
 
-// funçao de drop and drag
-export function dropHandler(e) {
-  console.log('File(s) dropped');
+// funcao de file do botao
+export function selectFile(e, setFile){
+  const file = e.target.files[0];
 
+  
+  if(fileSize(file.size)){
+    const objectURL = window.URL.createObjectURL(file);
+    const thumb = document.querySelector('[data-thumb]');
+    thumb.style.display = 'block';
+    thumb.style.backgroundImage = `url('${objectURL}')`;
+    
+    const data = new FormData();
+    data.append('file', file);
+    setFile(data);
+  }else{
+    console.log('arquivo muito grande, maximo de 200 kb')
+  }
+}
+
+// funçao de drop and drag
+export function dropHandler(e, setFile) {
+  console.log('File(s) dropped');
+  
   // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
   e.preventDefault();
   
   // tipos de img permitidas
-  const tiposImg = ['image/jpg', 'image/png', 'image/svg', 'image/jpeg', 'image/webp'];
+  const tiposImg = ['image/jpg', 'image/png', 'image/svg', 'image/jpeg', 'image/webp', 'image/bmp'];
 
   let file = e.dataTransfer.items[0].getAsFile(); // obj recebido
 
   if (e.dataTransfer.items) {
   // verificando se o arquivo é permitido
     if(tiposImg.includes(file.type)) {     
-      if(file.size < 205000) { // verificando o tamanho do arquivo
+      if(fileSize(file.size)) { // verificando o tamanho do arquivo
         const objectURL = window.URL.createObjectURL(file);
         const thumb = document.querySelector('[data-thumb]');
         thumb.style.display = 'block';
-        thumb.style.backgroundImage = `url('${objectURL}')`;        
+        thumb.style.backgroundImage = `url('${objectURL}')`;
+
+        const data = new FormData();
+        data.append('file', file);
+        setFile(data);
       }else {
         console.log('arquivo muito grande, maximo de 200 kb')
         console.log(file.size)
@@ -49,6 +73,14 @@ export function dropHandler(e) {
 //      console.log('... file[' + i + '].name = ' + e.dataTransfer.files[i].name);
 //    }
 //  }
+
+function fileSize(size) { // verificando o tamanho do arquivo
+  if(size < 205000) { // 200 kb
+    return true;
+  }else{ 
+    return false
+  }
+}
 
 
 export function dragOverHandler(e) {

@@ -26,7 +26,7 @@ export default () => {
                   onClick={() => {
                     getShowProduto(item.id, setProduto);
                   }}>
-                  <Link to="/produto">
+                  <Link to={`/produto?${item.nome.replace(/\s/g, '+').toLowerCase()}`}>
                     <Foto src={item.imagem}></Foto>
                     <NomeProduto>{item.nome}</NomeProduto>
                     <Valor>{item.valor}</Valor>
