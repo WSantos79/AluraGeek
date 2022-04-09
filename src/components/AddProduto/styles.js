@@ -7,27 +7,26 @@ import IntlCurrencyInput from "react-intl-currency-input"
 
 export const Container = styled.div`
     width: 100%;
-    height: 515px;
-   
-    margin: 4rem 0;
+    height: auto;
+    overflow: hidden;   
 
+    margin: 4rem 0;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @media (max-width: 480px) {        
-        height: 485px;
+    @media (max-width: 480px) {
         margin: 2rem 0;
     }
    
-    @media (min-width: 481px) and (max-width: 1080px) {       
-       height: 503px;
+    @media (min-width: 481px) and (max-width: 1080px) {
        margin: 2rem 0;
     }
 `
 export const Form = styled.form`
     width: 559px;
-    height: 515px;
+    height: auto; //515px
     margin: 0 ${margimPagina};    
   
     @media (max-width: 480px) {
@@ -36,8 +35,7 @@ export const Form = styled.form`
     }
 
     @media (min-width: 481px) and (max-width: 1080px) {
-        width: 100%;
-        height: 503px;
+        width: 100%;       
         margin: 0 2rem;
     }
 
@@ -108,8 +106,7 @@ export const ArrastaImg = styled.div`
         height: 134px;
         background: ${brancoFundo} url(${mais}) center 2rem no-repeat;
 
-        &:after {           
-            //padding: 81px 3em 2rem 3em;
+        &:after {
             content: 'Adicionar uma imagem para o produto';
         }
     }
@@ -121,11 +118,20 @@ export const Thumb = styled.div`
 
     position: absolute;
     display: none;
-
+    
     background-repeat: no-repeat;
     background-position: center center;
     object-fit: cover;
     background-size: cover;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+`
+export const LabelThumb = styled.label`
+    width: 100%;
+    height: 100%;
+    display: block;
 `
 export const Adicionar = styled(BotaoPrimario)`
     width: 100%;
@@ -214,4 +220,16 @@ border-bottom: 1px solid #c8c8c8;
 `
 export const MensagemDois = styled(Mensagem)`
     width: 100%;
+`
+export const ChooseCateg = styled.select`
+    margin: 1rem;
+    height: 30px;
+    width: 150px;
+
+    outline: 1px solid #2a7ae4;
+    border: none;
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+    }
 `

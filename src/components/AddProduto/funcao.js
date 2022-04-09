@@ -91,3 +91,12 @@ export function dragOverHandler(e) {
 }
 
 
+// limpando formulario apos finalização
+
+export function limpaForm () {
+  document.querySelector('[data-thumb]').style.backgroundImage = '';
+  document.querySelector('[data-nomeprod]').value = '';
+  document.querySelector('[data-tipo]').value = '';
+  document.querySelector('[data-desc]').value = '';
+  document.querySelector('[data-cat]').value = 2;
+}

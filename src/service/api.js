@@ -1,8 +1,26 @@
 import axios from "axios";
 
-export const api = axios.create({
+const api = axios.create({
   baseURL: 'https://api-commerce-geek.herokuapp.com'
 });
+
+
+// adicionando produtos novos
+export const AddProduto = async (nome, valor, imagem, descricao, categoria) => {
+  await api.post('/produtos', {   
+    nome: `${nome}`,
+    valor: `${valor}`,
+    imagem: `${imagem}`,
+    descricao: `${descricao}`,
+    categoria_id: parseInt(categoria)
+  })
+  .then(function (response) {
+    alert('Produto adicionado com sucesso!')
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
+}
 
 // verificar usuario login
 export const getLogin = async(email, senha, setIsLogged) => {
