@@ -26,7 +26,7 @@ export default () => {
         } else {
             AddProduto(nome, valor, img, descricao, categoria); // necessario useEffect para dar o set na img do upload
         }
-    }, [img]); 
+    }, [img]);
 
     async function Submit(e) {
         e.preventDefault();   
