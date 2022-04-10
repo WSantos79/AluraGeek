@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { brancoFundo, corTextoPrimario, margimPagina } from "../../styles/Variaveis";
-import { BotaoPrimario, Mensagem, Input } from "../../styles";
-import imagem from "../../assets/images/add-img.svg"
-import mais from "../../assets/images/mais.svg"
+import { brancoFundo, corTextoPrimario, margimPagina } from "./Variaveis";
+import { BotaoPrimario, Mensagem, Input } from "./";
+import imagem from "../assets/images/add-img.svg"
+import mais from "../assets/images/mais.svg"
 import IntlCurrencyInput from "react-intl-currency-input"
 
 export const Container = styled.div`

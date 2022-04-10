@@ -65,14 +65,6 @@ export function dropHandler(e, setFile) {
     }
   }
 }
-    // Use a interface DataTransferItemList para acessar o (s) arquivo (s)
-    
-//    else {
-//    // Use a interface DataTransfer para acessar o (s) arquivo (s)
-//    for (var i = 0; i < e.dataTransfer.files.length; i++) {
-//      console.log('... file[' + i + '].name = ' + e.dataTransfer.files[i].name);
-//    }
-//  }
 
 function fileSize(size) { // verificando o tamanho do arquivo
   if(size < 205000) { // 200 kb
@@ -90,9 +82,7 @@ export function dragOverHandler(e) {
   e.preventDefault();
 }
 
-
 // limpando formulario apos finalização
-
 export function limpaForm () {
   document.querySelector('[data-thumb]').style.backgroundImage = '';
   document.querySelector('[data-nomeprod]').value = '';

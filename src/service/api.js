@@ -22,6 +22,18 @@ export const AddProduto = async (nome, valor, imagem, descricao, categoria) => {
   });
 }
 
+// deletando produto
+export const deleteProduto = async (id, setUpdate) => {
+  await api.delete(`/produtos/${id}`)
+  .then(function (response) {
+    alert('Produto deletado com sucesso!');
+    setUpdate(id); // mudando stat para renderizar a pag
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
+}
+
 // verificar usuario login
 export const getLogin = async(email, senha, setIsLogged) => {
   console.log(email)

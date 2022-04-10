@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import SobreEmpresa from "./components/SobreEmpresa";
 import Footer from "./components/Footer";
 import BuscaProduto from "./components/BuscaProduto";
+import EditProduto from "./pages/EditProduto";
 
 
 function Router() {
@@ -28,6 +29,7 @@ function Router() {
                     <Route path="/produto/home" element={<ProdutoAdm />} />
                     <Route path="/produtos/cat" element={<VerCategoria />} />
                     <Route path="/produto/add" element={<AddProduto />} />
+                    <Route path="/produto/edit" element={<EditProduto />} />
                     <Route path="/search" element={<BuscaProduto/>} />
                 </Routes> 
             </ProdutoProvider>

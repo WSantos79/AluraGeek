@@ -1,23 +1,26 @@
-import React, { useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef, useContext} from "react";
 import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb } from "../../styles/addEditProduto";
 import { Label, Fieldset } from "../../styles";
 import { currencyConfig, dropHandler, dragOverHandler, selectFile, limpaForm } from "../../scripts/addEditProduto";
 import { uploadImg } from "../../service/api-upload";
 import { AddProduto } from "../../service/api";
+import { ProdutoContext } from "../../common/context/produto";
 
 
 export default () => {
-    const [file, setFile] = useState(false);
-    const [nome, setNome] = useState('');
-    const [valor, setValor] = useState('');
-    const [descricao, setDescricao] = useState('');
-    const [categoria, setCategoria] = useState(2);
+    const { produto } = useContext(ProdutoContext);
+    const [file, setFile] = useState(produto.imagem);
+    const [nome, setNome] = useState(produto.nome);
+    const [valor, setValor] = useState(produto.valor);
+    const [descricao, setDescricao] = useState(produto.descricao);
+    const [categoria, setCategoria] = useState(produto.categoria_id);
     const [altValor, setAltValor] = useState('');
     const [img, SetImg] = useState('');
     const isInitialMount = useRef(true);
-
+    
     useEffect(() => {
         setValor(document.querySelector(`[data-tipo]`).value);
+        console.log(produto)
     }, [altValor]);
     
     useEffect(() => {
@@ -30,10 +33,7 @@ export default () => {
 
     async function Submit(e) {
         e.preventDefault();
-        if(!file){ // verificando se tem img do produto            
-            alert('Insira uma imagem');
-            return;
-        }
+
         await uploadImg(file, SetImg);
         limpaForm();
     }
@@ -43,7 +43,7 @@ export default () => {
         <Container>
             <Form onSubmit={Submit} method="post">
                 <Fieldset>
-                    <Legend>Adicionar novo produto</Legend>             
+                    <Legend>Editar produto</Legend>
                     <Div>
                         <ArrastaImg 
                         onDrop={(e) => {  dropHandler(e, setFile) }} 
@@ -68,10 +68,12 @@ export default () => {
 
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
                     <InputMoney
+                    value={'750,00'}
                     onChange={(e) => { setAltValor(e.target.value)}}
                     data-tipo='preco' name="valor" currency="BRL" config={currencyConfig} required/>
                    
                     <MensagemDois data-desc
+                    value={descricao}
                     placeholder="Descrição do produto" required minLength={5}
                     onChange={(e) => { setDescricao(e.target.value)}}
                     />
@@ -84,7 +86,7 @@ export default () => {
                         </ChooseCateg>
                     </label>
                 </Fieldset>               
-                <Adicionar type="submit">Adicionar produto</Adicionar>
+                <Adicionar type="submit">Salvar</Adicionar>
           </Form>
         </Container>
     </>
