@@ -47,10 +47,10 @@ export default () => {
                       e.target.value = '';
                       navigate(`/search`);               
                     }
-                  }               
+                  } 
                 }}           
               ></Busca>
-              <Span data-found>Busque com o mínimo 3 letras</Span>
+              <Span data-found>Busque com o mínimo de 3 letras</Span>
             </ContainerBusca>
           </Div>
           

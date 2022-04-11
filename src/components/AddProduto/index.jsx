@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef} from "react";
-import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb } from "../../styles/addEditProduto";
+import { Container, Legend, Adicionar, Procurar, InputDisable, Div, DivOne, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb, Voltar, Span } from "../../styles/addEditProduto";
 import { Label, Fieldset } from "../../styles";
 import { currencyConfig, dropHandler, dragOverHandler, selectFile, limpaForm } from "../../scripts/addEditProduto";
 import { uploadImg } from "../../service/api-upload";
 import { AddProduto } from "../../service/api";
+import { valida } from "../../scripts/validacoes";
 
 
 export default () => {
@@ -17,8 +18,8 @@ export default () => {
     const isInitialMount = useRef(true);
 
     useEffect(() => {
-        setValor(document.querySelector(`[data-tipo]`).value);
-    }, [altValor]);
+        setValor(document.querySelector(`[data-valor]`).value);
+    }, [altValor]); // necessario para dar tempo da lib mudar o valor
     
     useEffect(() => {
         if (isInitialMount.current) {
@@ -29,11 +30,23 @@ export default () => {
     }, [img]);
 
     async function Submit(e) {
-        e.preventDefault();
-        if(!file){ // verificando se tem img do produto            
-            alert('Insira uma imagem');
+        e.preventDefault();        
+        const alert = document.querySelector('[data-alert-img]');
+        let valorEdit = valor.replace(/\s/g, '').replace('R$', '');
+
+        if(parseInt(valorEdit) < 1){ // verificando se o valor é maior que 1
             return;
-        }
+        };
+
+        if(!file){ // verificando se tem img do produto
+            alert.style.display = 'block';
+            alert.previousElementSibling.style.marginBottom = '5px';            
+            return;
+        };
+
+        alert.style.display = 'none';
+        alert.previousElementSibling.style.marginBottom = '1rem';       
+        
         await uploadImg(file, SetImg);
         limpaForm();
     }
@@ -43,7 +56,10 @@ export default () => {
         <Container>
             <Form onSubmit={Submit} method="post">
                 <Fieldset>
-                    <Legend>Adicionar novo produto</Legend>             
+                    <DivOne>
+                        <Legend>Adicionar novo produto</Legend>
+                        <Voltar to='/produto/home'>Voltar</Voltar>
+                    </DivOne>
                     <Div>
                         <ArrastaImg 
                         onDrop={(e) => {  dropHandler(e, setFile) }} 
@@ -59,22 +75,28 @@ export default () => {
                         data-file type="file" id="procurar" accept="image/*" 
                         />
                     </Div>
-
+                    <Span data-alert-img>Insira uma foto com o máximo de 200kb</Span>                    
+                    <div> 
                     <Label htmlFor="nomeproduto" aria-label="Digite o nome do Produto">Nome do produto</Label>
-                    <InputDois data-nomeprod
+                    <InputDois data-nome
                     name="nomeproduto" type="text" required minLength={3} 
                     onChange={(e) => { setNome(e.target.value)}}
                     />
-
+                    <Span data-alert-nome>O nome deve ter o mínimo de 3 letras</Span>
+                    </div>
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
                     <InputMoney
                     onChange={(e) => { setAltValor(e.target.value)}}
-                    data-tipo='preco' name="valor" currency="BRL" config={currencyConfig} required/>
+                    data-valor name="valor" 
+                    currency="BRL" config={currencyConfig} required               
+                    />
+                    <Span data-alert-valor>O valor deve ser maior que R$ 1,00</Span>
                    
                     <MensagemDois data-desc
                     placeholder="Descrição do produto" required minLength={5}
                     onChange={(e) => { setDescricao(e.target.value)}}
                     />
+                    <Span data-alert-desc>A descrição deve ter o mínimo de 5 letras<br></br></Span>
 
                     <label>Escolha a categoria do produto: 
                         <ChooseCateg data-cat onChange={(e) => { setCategoria(e.target.value)}}>
@@ -84,7 +106,7 @@ export default () => {
                         </ChooseCateg>
                     </label>
                 </Fieldset>               
-                <Adicionar type="submit">Adicionar produto</Adicionar>
+                <Adicionar type="submit" onClick={() => valida()} >Adicionar produto</Adicionar>
           </Form>
         </Container>
     </>

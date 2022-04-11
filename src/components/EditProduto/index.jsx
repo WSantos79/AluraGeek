@@ -1,40 +1,51 @@
 import React, { useEffect, useState, useRef, useContext} from "react";
-import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb } from "../../styles/addEditProduto";
+import { Container, Legend, Adicionar, Procurar, InputDisable, Div, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb, DivOne, Voltar } from "../../styles/addEditProduto";
 import { Label, Fieldset } from "../../styles";
 import { currencyConfig, dropHandler, dragOverHandler, selectFile, limpaForm } from "../../scripts/addEditProduto";
 import { uploadImg } from "../../service/api-upload";
-import { AddProduto } from "../../service/api";
+import { EditProduto } from "../../service/api";
 import { ProdutoContext } from "../../common/context/produto";
 
 
 export default () => {
     const { produto } = useContext(ProdutoContext);
-    const [file, setFile] = useState(produto.imagem);
+    const [file, setFile] = useState(false);
     const [nome, setNome] = useState(produto.nome);
     const [valor, setValor] = useState(produto.valor);
     const [descricao, setDescricao] = useState(produto.descricao);
     const [categoria, setCategoria] = useState(produto.categoria_id);
-    const [altValor, setAltValor] = useState('');
-    const [img, SetImg] = useState('');
+    const [altValor, setAltValor] = useState(produto.valor);
+    const [img, SetImg] = useState(false);
     const isInitialMount = useRef(true);
-    
+    const [runEdit, SetRunEdit] = useState(false);
+
     useEffect(() => {
-        setValor(document.querySelector(`[data-tipo]`).value);
-        console.log(produto)
+        if (isInitialMount.current) {
+            return;
+        }else{
+            setValor(document.querySelector(`[data-valor]`).value);
+        }
     }, [altValor]);
     
     useEffect(() => {
         if (isInitialMount.current) {
+            const thumb = document.querySelector('[data-thumb]');
+            thumb.style.display = 'block';
+            thumb.style.backgroundImage = `url('${produto.imagem}')`;
             isInitialMount.current = false;
         } else {
-            AddProduto(nome, valor, img, descricao, categoria); // necessario useEffect para dar o set na img do upload
+            EditProduto(produto.id, nome, valor, img, descricao, categoria); // necessario useEffect para dar o set na img do upload
         }
-    }, [img]);
+    }, [img, runEdit]);
 
     async function Submit(e) {
         e.preventDefault();
+        if(file){ // verificando se alterou img do produto            
+            await uploadImg(file, SetImg);
+        }else{
+            SetRunEdit(true);
+        }
 
-        await uploadImg(file, SetImg);
         limpaForm();
     }
     
@@ -43,7 +54,10 @@ export default () => {
         <Container>
             <Form onSubmit={Submit} method="post">
                 <Fieldset>
-                    <Legend>Editar produto</Legend>
+                    <DivOne>
+                        <Legend>Editar produto</Legend>
+                        <Voltar to='/produto/home'>Voltar</Voltar>
+                    </DivOne>                    
                     <Div>
                         <ArrastaImg 
                         onDrop={(e) => {  dropHandler(e, setFile) }} 
@@ -61,16 +75,17 @@ export default () => {
                     </Div>
 
                     <Label htmlFor="nomeproduto" aria-label="Digite o nome do Produto">Nome do produto</Label>
-                    <InputDois data-nomeprod
+                    <InputDois data-nome
+                    value={nome}                    
                     name="nomeproduto" type="text" required minLength={3} 
                     onChange={(e) => { setNome(e.target.value)}}
                     />
-
+                    
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
                     <InputMoney
-                    value={'750,00'}
+                    value={altValor.replace(/\s/g, '').replace('R$', '')}
                     onChange={(e) => { setAltValor(e.target.value)}}
-                    data-tipo='preco' name="valor" currency="BRL" config={currencyConfig} required/>
+                    data-valor name="valor" currency="BRL" config={currencyConfig} required/>
                    
                     <MensagemDois data-desc
                     value={descricao}
@@ -79,9 +94,9 @@ export default () => {
                     />
 
                     <label>Escolha a categoria do produto: 
-                        <ChooseCateg data-cat onChange={(e) => { setCategoria(e.target.value)}}>
+                        <ChooseCateg value={categoria} data-cat onChange={(e) => { setCategoria(e.target.value)}}>
                             <option value={1} >Star Wars</option>
-                            <option value={2} selected>Consoles</option>
+                            <option value={2} >Consoles</option>
                             <option value={3} >Diversos</option>
                         </ChooseCateg>
                     </label>

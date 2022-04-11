@@ -1,9 +1,17 @@
 import styled from "styled-components";
 import { brancoFundo, corTextoPrimario, margimPagina } from "./Variaveis";
-import { BotaoPrimario, Mensagem, Input } from "./";
+import { BotaoPrimario, Mensagem, Input, BotaoSecundario } from "./";
 import imagem from "../assets/images/add-img.svg"
 import mais from "../assets/images/mais.svg"
 import IntlCurrencyInput from "react-intl-currency-input"
+
+
+export const Voltar = styled(BotaoSecundario)`
+    padding: 1rem 2rem;   
+
+    margin-bottom: 0.5rem;
+`
+
 
 export const Container = styled.div`
     width: 100%;
@@ -53,6 +61,11 @@ export const Legend = styled.legend`
         line-height: 26px;
     }
 `
+export const DivOne = styled.div`
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;   
+`
 export const Div = styled.div`
     width: 559px;
     height: 152px;
@@ -61,7 +74,7 @@ export const Div = styled.div`
     margin-bottom: 1rem;
 
     @media (max-width: 480px) {
-        width:100%;        
+        width:100%;
     }
 
     & > span {
@@ -232,4 +245,9 @@ export const ChooseCateg = styled.select`
     @media (max-width: 480px) {
         margin-left: 0;
     }
+`
+export const Span = styled.span`
+    color: red;
+    font-size: 14px;
+    display: none;
 `

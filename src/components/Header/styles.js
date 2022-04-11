@@ -21,11 +21,6 @@ export const Header = styled.header`
   width: 100%;
   margin: 2rem ${margimPagina};
   
-  & > a {
-    text-decoration: none;
-    color: #2a7ae4;
-  }
-  
   @media (max-width: 480px) {
     margin: 1rem 1rem;
   }

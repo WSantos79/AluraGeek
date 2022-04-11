@@ -28,7 +28,7 @@ export const BotaoPrimario = styled.button`
   }
 `
 
-export const BotaoSecundario = styled(Link)`  
+export const BotaoSecundario = styled(Link)`
   padding: 1rem 70px;
  
   background: #ffffff;
@@ -36,6 +36,7 @@ export const BotaoSecundario = styled(Link)`
   color: #2a7ae4;
   box-sizing: border-box;
   
+  text-decoration: none;
   font-size: 1rem;
   transition-duration: 300ms;  
   transition-timing-function: ease-out;

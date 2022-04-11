@@ -15,7 +15,7 @@ export const AddProduto = async (nome, valor, imagem, descricao, categoria) => {
     categoria_id: parseInt(categoria)
   })
   .then(function (response) {
-    alert('Produto adicionado com sucesso!')
+    alert('Produto adicionado com sucesso!');
   })
   .catch(function (error) {
     console.error(error);
@@ -32,6 +32,38 @@ export const deleteProduto = async (id, setUpdate) => {
   .catch(function (error) {
     console.error(error);
   });
+}
+
+// editando o produto
+export const EditProduto = async (id, nome, valor, imagem, descricao, categoria) => {
+  if(imagem){
+    await api.patch(`/produtos/${id}`, {   
+      nome: `${nome}`,
+      valor: `${valor}`,
+      imagem: `${imagem}`,
+      descricao: `${descricao}`,
+      categoria_id: parseInt(categoria)
+    })
+    .then(function (response) {
+      alert('Produto salvo com sucesso!');
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+  }else{
+    await api.patch(`/produtos/${id}`, {   
+      nome: `${nome}`,
+      valor: `${valor}`,      
+      descricao: `${descricao}`,
+      categoria_id: parseInt(categoria)
+    })
+    .then(function (response) {
+      alert('Produto salvo com sucesso!');
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+  }
 }
 
 // verificar usuario login

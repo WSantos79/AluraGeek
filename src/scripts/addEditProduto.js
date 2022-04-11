@@ -1,4 +1,3 @@
-
 export const currencyConfig = {
   locale: "pt-BR",
   formats: {
@@ -16,9 +15,12 @@ export const currencyConfig = {
 // funcao de file do botao
 export function selectFile(e, setFile){
   const file = e.target.files[0];
+  const alert = document.querySelector('[data-alert-img]');
 
-  
   if(fileSize(file.size)){
+    alert.style.display = 'none';
+    alert.previousElementSibling.style.marginBottom = '1rem';
+
     const objectURL = window.URL.createObjectURL(file);
     const thumb = document.querySelector('[data-thumb]');
     thumb.style.display = 'block';
@@ -28,13 +30,15 @@ export function selectFile(e, setFile){
     data.append('file', file);
     setFile(data);
   }else{
-    console.log('arquivo muito grande, maximo de 200 kb')
+    alert.style.display = 'block';
+    alert.previousElementSibling.style.marginBottom = '5px';
+    alert.textContent = 'Insira uma foto com o máximo de 200kb'
   }
 }
 
 // funçao de drop and drag
 export function dropHandler(e, setFile) {
-  console.log('File(s) dropped');
+  const alert = document.querySelector('[data-alert-img]');
   
   // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
   e.preventDefault();
@@ -45,9 +49,12 @@ export function dropHandler(e, setFile) {
   let file = e.dataTransfer.items[0].getAsFile(); // obj recebido
 
   if (e.dataTransfer.items) {
-  // verificando se o arquivo é permitido
-    if(tiposImg.includes(file.type)) {     
+  // verificando se o arquivo é permitido    
+    if(tiposImg.includes(file.type)) {
       if(fileSize(file.size)) { // verificando o tamanho do arquivo
+        alert.style.display = 'none';
+        alert.previousElementSibling.style.marginBottom = '1rem';
+
         const objectURL = window.URL.createObjectURL(file);
         const thumb = document.querySelector('[data-thumb]');
         thumb.style.display = 'block';
@@ -57,11 +64,14 @@ export function dropHandler(e, setFile) {
         data.append('file', file);
         setFile(data);
       }else {
-        console.log('arquivo muito grande, maximo de 200 kb')
-        console.log(file.size)
+        alert.style.display = 'block';
+        alert.previousElementSibling.style.marginBottom = '5px';
+        alert.textContent = 'Insira uma foto com o máximo de 200kb'
       }
     }else {
-      console.log('arquivo nao permitido')
+      alert.style.display = 'block';
+      alert.previousElementSibling.style.marginBottom = '5px';
+      alert.textContent = 'Arquivo não permitido, selecione uma imagem'
     }
   }
 }
@@ -74,10 +84,7 @@ function fileSize(size) { // verificando o tamanho do arquivo
   }
 }
 
-
-export function dragOverHandler(e) {
-  console.log('File(s) in drop zone');
-
+export function dragOverHandler(e) { 
   // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
   e.preventDefault();
 }

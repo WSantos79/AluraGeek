@@ -35,7 +35,12 @@ export const Delet = styled.img`
   top: 4%;
   left: 65%; 
   cursor: pointer;
- 
+  
+  transition: all 0.7s ease-out;
+  &:hover {
+    filter: invert(70%);
+  }
+
   @media (max-width: 480px) {
     left: 63%;
   }
@@ -48,6 +53,11 @@ height: 18px;
 top: 4%;
 left: 85%;
 cursor: pointer;
+
+transition: all 0.7s ease-out;
+  &:hover {
+    filter: invert(70%);
+  }
 
 @media (max-width: 480px) {
   left: 83%;  
