@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.svg";
-import { BotaoPrimario, Label, Input, Fieldset, Mensagem } from "../../styles";
+import { BotaoPrimario, Label, Input, Fieldset, Mensagem, Alert} from "../../styles";
 import { Container, Section, Logo, Item, Link, LastItem } from "./styles";
 import { SendEmail } from "./funcao";
+import { validaContato } from "../../scripts/validacoes";
 
 export default () => {
   const [remetente,setRemetente] = useState('');
@@ -28,16 +29,24 @@ export default () => {
             <LastItem><Link href="#">Anuncie aqui</Link></LastItem>
           </ul>
 
-          <form onSubmit={Submit}>
+          <form onSubmit={Submit} novalidate>
             <Fieldset>
               <legend>Fale conosco</legend>
 
               <Label htmlFor="name" aria-label="Digite seu nome">Nome</Label>
-              <Input onChange={(e) => {setRemetente(e.target.value);}} id="name" type="text" required minLength={3}/>
+              <Input data-name="nome"
+              onChange={(e) => {setRemetente(e.target.value);}}
+               id="name" type="text" required minLength={3}
+               />
+              <Alert data-alert-name>O nome deve ter o mínimo de 3 letras</Alert>
 
-              <Mensagem onChange={(e) => {setMensagem(e.target.value);}} placeholder="Escreva sua mensagem" required minLength={5}/>
+              <Mensagem data-msg="mensagem"
+              onChange={(e) => {setMensagem(e.target.value);}} 
+              placeholder="Escreva sua mensagem" required minLength={15}
+              />
+              <Alert data-alert-msg>A mensagem deve ter o mínimo de 15 letras</Alert>
             </Fieldset>
-            <BotaoPrimario type="submit">Enviar mensagem</BotaoPrimario>
+            <BotaoPrimario type="submit" onClick={() => validaContato()} >Enviar mensagem</BotaoPrimario>
           </form>      
         </Container>
       </Section>

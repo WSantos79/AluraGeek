@@ -246,8 +246,3 @@ export const ChooseCateg = styled.select`
         margin-left: 0;
     }
 `
-export const Span = styled.span`
-    color: red;
-    font-size: 14px;
-    display: none;
-`

@@ -3,6 +3,13 @@ import { corBotaoPrimario, corBotaoPrimarioHover } from "./Variaveis"
 import { corTextoPrimario, margimPagina, corFundo, corTextoInput } from "./Variaveis";
 import { Link } from "react-router-dom";
 
+export const Alert = styled.span`
+    color: red;
+    font-size: 13px;
+    display: none;
+    word-wrap: break-word;
+`
+
 export const BotaoPrimario = styled.button`
   border: none;
   padding: 1rem;

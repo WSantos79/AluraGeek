@@ -21,6 +21,15 @@ export const Container = styled.div`
 export const Form = styled.form`
   border: none;
   
+  width: 423px;
+  @media (max-width: 480px) {
+    width: 328px;
+  }
+  @media (min-width: 481px) and (max-width: 1080px) {
+    width: 434px;
+    
+  }
+
   & > fieldset:first-child {
     border: none;
     display: flex;
@@ -31,7 +40,7 @@ export const Form = styled.form`
         margin: 0 auto;
       }
     }
-  } 
+  }
 `;
 
 export const Legenda = styled.legend`
@@ -51,7 +60,7 @@ export const Input = styled.input`
 
   border-radius: 4px;
   padding: 17px 0 26px 12px;
-  width: 423px;
+  width: 100%;
 
   border: none;
   border-bottom: 1px solid #c8c8c8;
@@ -65,13 +74,11 @@ export const Input = styled.input`
   }
 
   @media (max-width: 480px) {
-    width: 328px;
     margin: 1rem 0;
     padding: 8px 0 13px 12px;
   }
 
   @media (min-width: 481px) and (max-width: 1080px) {
-    width: 434px;
     margin: 1rem 0;
     padding: 8px 0 13px 12px;
   }
@@ -80,7 +87,8 @@ export const Input = styled.input`
 export const Entrar = styled(BotaoPrimario)`
   padding: 20.5px 185.5px;
   align-self: center;
-  
+  width: 100%;
+
   & > a {
     text-decoration: none;
     color: #FFFFFF;

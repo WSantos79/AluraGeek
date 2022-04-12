@@ -11,7 +11,7 @@ export default () => {
     <>
       {!produto.length && (
           <>
-            <NotFound>Não encontramos o produto que você procurou :(</NotFound>          
+            <NotFound>Não encontramos o produto que você procura :(</NotFound>          
           </>
       )}
 

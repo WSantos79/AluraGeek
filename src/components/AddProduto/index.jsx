@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef} from "react";
-import { Container, Legend, Adicionar, Procurar, InputDisable, Div, DivOne, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb, Voltar, Span } from "../../styles/addEditProduto";
-import { Label, Fieldset } from "../../styles";
+import { Container, Legend, Adicionar, Procurar, InputDisable, Div, DivOne, ArrastaImg, InputDois, MensagemDois, Form, InputMoney, Thumb, ChooseCateg, LabelThumb, Voltar } from "../../styles/addEditProduto";
+import { Label, Fieldset, Alert } from "../../styles";
 import { currencyConfig, dropHandler, dragOverHandler, selectFile, limpaForm } from "../../scripts/addEditProduto";
 import { uploadImg } from "../../service/api-upload";
 import { AddProduto } from "../../service/api";
-import { valida } from "../../scripts/validacoes";
+import { validaProduto } from "../../scripts/validacoes";
 
 
 export default () => {
@@ -45,7 +45,7 @@ export default () => {
         };
 
         alert.style.display = 'none';
-        alert.previousElementSibling.style.marginBottom = '1rem';       
+        alert.previousElementSibling.style.marginBottom = '1rem';
         
         await uploadImg(file, SetImg);
         limpaForm();
@@ -62,7 +62,7 @@ export default () => {
                     </DivOne>
                     <Div>
                         <ArrastaImg 
-                        onDrop={(e) => {  dropHandler(e, setFile) }} 
+                        onDrop={(e) => {  dropHandler(e, setFile) }}
                         onDragOver={(e) => {  dragOverHandler(e) }}
                         >
                             <Thumb data-thumb><LabelThumb htmlFor="procurar"></LabelThumb></Thumb>
@@ -70,33 +70,34 @@ export default () => {
                         
                         <span>Ou</span>
                         <Procurar htmlFor="procurar"/>
-                        <InputDisable 
+                        <InputDisable                        
                         onChange={(e) => {  selectFile(e, setFile) }} 
                         data-file type="file" id="procurar" accept="image/*" 
                         />
                     </Div>
-                    <Span data-alert-img>Insira uma foto com o máximo de 200kb</Span>                    
+                    <Alert data-alert-img>Insira uma foto com o máximo de 200kb</Alert>                    
                     <div> 
                     <Label htmlFor="nomeproduto" aria-label="Digite o nome do Produto">Nome do produto</Label>
-                    <InputDois data-nome
+                    <InputDois data-nome="nome"
                     name="nomeproduto" type="text" required minLength={3} 
                     onChange={(e) => { setNome(e.target.value)}}
                     />
-                    <Span data-alert-nome>O nome deve ter o mínimo de 3 letras</Span>
+                    <Alert data-alert-nome>O nome deve ter o mínimo de 3 letras</Alert>
                     </div>
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
                     <InputMoney
                     onChange={(e) => { setAltValor(e.target.value)}}
-                    data-valor name="valor" 
+                    data-valor="valor" name="valor"
+                    type="number"
                     currency="BRL" config={currencyConfig} required               
                     />
-                    <Span data-alert-valor>O valor deve ser maior que R$ 1,00</Span>
+                    <Alert data-alert-valor>O valor deve ser maior que R$ 1,00</Alert>
                    
-                    <MensagemDois data-desc
-                    placeholder="Descrição do produto" required minLength={5}
+                    <MensagemDois data-desc="descricao"
+                    placeholder="Descrição do produto" required minLength={10}
                     onChange={(e) => { setDescricao(e.target.value)}}
                     />
-                    <Span data-alert-desc>A descrição deve ter o mínimo de 5 letras<br></br></Span>
+                    <Alert data-alert-desc>A descrição deve conter o mínimo de 10 caracteres<br></br></Alert>
 
                     <label>Escolha a categoria do produto: 
                         <ChooseCateg data-cat onChange={(e) => { setCategoria(e.target.value)}}>
@@ -106,7 +107,7 @@ export default () => {
                         </ChooseCateg>
                     </label>
                 </Fieldset>               
-                <Adicionar type="submit" onClick={() => valida()} >Adicionar produto</Adicionar>
+                <Adicionar type="submit" onClick={() => validaProduto()} >Adicionar produto</Adicionar>
           </Form>
         </Container>
     </>

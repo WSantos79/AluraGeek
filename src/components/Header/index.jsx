@@ -7,7 +7,7 @@ import cancel from "../../assets/images/cancel.png";
 import { showSearch, disableSearch } from "./func";
 import { Link, useNavigate } from "react-router-dom";
 import { getBusca } from "../../service/api";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ProdutoContext } from "../../common/context/produto";
 
 export default () => { 

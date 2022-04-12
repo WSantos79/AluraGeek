@@ -11,13 +11,14 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;  
   
   font-family: 'Raleway', sans-serif;
-
+  
   font-style: normal;
   font-weight: 400;
 }
 
 body { 
   background: ${corFundo};
+  
 }
 
 .drop-zone__thumb {

@@ -35,7 +35,7 @@ export const deleteProduto = async (id, setUpdate) => {
 }
 
 // editando o produto
-export const EditProduto = async (id, nome, valor, imagem, descricao, categoria) => {
+export const EditProduto = async (id, nome, valor, imagem, descricao, categoria, setIsUpdate) => {
   if(imagem){
     await api.patch(`/produtos/${id}`, {   
       nome: `${nome}`,
@@ -45,10 +45,11 @@ export const EditProduto = async (id, nome, valor, imagem, descricao, categoria)
       categoria_id: parseInt(categoria)
     })
     .then(function (response) {
-      alert('Produto salvo com sucesso!');
+      setIsUpdate(true);
+      alert('Produto salvo com sucesso!');     
     })
     .catch(function (error) {
-      console.error(error);
+      alert.error(error);
     });
   }else{
     await api.patch(`/produtos/${id}`, {   
@@ -58,10 +59,11 @@ export const EditProduto = async (id, nome, valor, imagem, descricao, categoria)
       categoria_id: parseInt(categoria)
     })
     .then(function (response) {
-      alert('Produto salvo com sucesso!');
+      setIsUpdate(true);
+      alert('Produto salvo com sucesso!');      
     })
     .catch(function (error) {
-      console.error(error);
+      alert.error(error);
     });
   }
 }
@@ -74,7 +76,7 @@ export const getLogin = async(email, senha, setIsLogged) => {
       if(response.data.length > 0){
         setIsLogged(true);
       }else{
-        alert('usuário não encontrado!');
+        alert('Usuário não encontrado!');
       }      
     })
     .catch(function (error) {
