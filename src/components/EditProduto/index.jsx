@@ -101,7 +101,7 @@ export default () => {
 
                     <Label htmlFor="valor" aria-label="Digite o valor do Produto">Preço do produto</Label>              
                     <InputMoney
-                    type="numeric"
+                    numeric
                     value={altValor.replace(/\s/g, '').replace('R$', '')}
                     onChange={(e) => { setAltValor(e.target.value)}}
                     data-valor="valor" name="valor"

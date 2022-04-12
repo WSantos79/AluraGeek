@@ -88,7 +88,7 @@ export default () => {
                     <InputMoney
                     onChange={(e) => { setAltValor(e.target.value)}}
                     data-valor="valor" name="valor"
-                    type="numeric"
+                    numeric
                     currency="BRL" config={currencyConfig} required               
                     />
                     <Alert data-alert-valor>O valor deve ser maior que R$ 1,00</Alert>
