@@ -70,7 +70,6 @@ export const EditProduto = async (id, nome, valor, imagem, descricao, categoria,
 
 // verificar usuario login
 export const getLogin = async(email, senha, setIsLogged) => {
-  console.log(email)
   await api.get(`/users?email=${email}&senha=${senha}`)
     .then(function (response) {
       if(response.data.length > 0){

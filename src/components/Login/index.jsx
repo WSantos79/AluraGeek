@@ -2,16 +2,18 @@ import React from "react";
 import { Container, Form, Legenda, Input, Entrar } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { getLogin } from "../../service/api";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { validaLogin } from "../../scripts/validacoes";
 import { Alert } from "../../styles";
+import { AuthContext } from '../../common/context/auth'
+
 
 export default () => {
   const [email,setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const navigate = useNavigate();
-  const [isLogged, setIsLogged] = useState(false); 
+  const navigate = useNavigate();  
   const [firstUpdate, setFirstUpdate] = useState(true);
+  const { isLogged, setIsLogged } = useContext(AuthContext);
 
   useEffect(() => {  // informar se o usuario e senha estao corretos e redirecionar a pag
     if(firstUpdate) {

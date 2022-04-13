@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import search from "../../assets/images/search.svg";
+import { BotaoSecundario } from "../../styles";
 import { corTextoInput, corFundo, brancoFundo } from "../../styles/Variaveis";
 import { margimPagina } from "../../styles/Variaveis";
 
@@ -116,3 +117,11 @@ export const IconCancel = styled.img`
     align-self: center;
 `
 ;
+
+export const BotaoSecundarioMenu = styled(BotaoSecundario)`
+    padding: 1rem;
+
+    @media (max-width: 1080px) {
+      padding: 12px 1rem;
+    }
+`

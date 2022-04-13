@@ -1,5 +1,6 @@
 // mostrar barra de pesquisa para mobile
-export function showSearch() {
+export function showSearch(isAuth) {
+  console.log(isAuth)
   const busca = document.querySelector("[data-busca]");
   busca.style.visibility = `visible`;
   busca.style.opacity = '1';
@@ -9,7 +10,7 @@ export function showSearch() {
   document.querySelector("[data-cancel]").style.display = `block`;
   document.querySelector("[data-iconbusca]").style.display = `none`;
 
-  const login = document.querySelector("[data-login]");
+  const login = document.querySelector(`[${isAuth}]`);
   login.style.visibility = `hidden`;
   login.style.opacity = '0';
   login.style.width = '0px';
@@ -26,7 +27,8 @@ export function showSearch() {
 }
 
 // ocultar barra de pesquisa para mobile
-export function disableSearch() {
+export function disableSearch(isAuth) {
+  console.log(isAuth)
   const busca = document.querySelector("[data-busca]");
   busca.style.visibility = `hidden`;
   busca.style.opacity = '0';
@@ -36,13 +38,22 @@ export function disableSearch() {
   document.querySelector("[data-cancel]").style.display = `none`;
   document.querySelector("[data-iconbusca]").style.display = `block`;
 
-  const login = document.querySelector("[data-login]");
-  login.innerText = 'Login';
-  login.style.border = '1px solid #2a7ae4';
-  login.style.visibility = `visible`;
-  login.style.opacity = '1';
-  login.style.padding = '12px 47.5px';
-  login.style.width = 'initial';
+  const login = document.querySelector(`[${isAuth}]`);
+  if(isAuth === 'data-login'){
+    login.innerText = 'Login';
+    login.style.border = '1px solid #2a7ae4';
+    login.style.visibility = `visible`;
+    login.style.opacity = '1';
+    login.style.padding = '12px 47.5px';
+    login.style.width = 'initial';
+  }else{
+    login.innerText = 'Menu administrador';
+    login.style.border = '1px solid #2a7ae4';
+    login.style.visibility = `visible`;
+    login.style.opacity = '1';
+    login.style.padding = '12px 1rem';
+    login.style.width = 'initial';
+  }
 
   const logo = document.querySelector("[data-logo]");
   logo.style.visibility = `visible`;
