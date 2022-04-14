@@ -35,6 +35,9 @@ senha: Admin123
 <li>:small_blue_diamond: React Router DOM</li>
 <li>:small_blue_diamond: Styled Components</li>
 <li>:small_blue_diamond: JavaScript</li>
+<li>:small_blue_diamond: Axios</li>
+<li>:small_blue_diamond: EmailJS</li>
+<li>:small_blue_diamond: JSON Server</li>
 <li>:small_blue_diamond: HTML</li>
 <li>:small_blue_diamond: CSS</li>
 </ul>
