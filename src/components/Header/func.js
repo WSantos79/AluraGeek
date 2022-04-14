@@ -39,20 +39,17 @@ export function disableSearch(isAuth) {
   document.querySelector("[data-iconbusca]").style.display = `block`;
 
   const login = document.querySelector(`[${isAuth}]`);
+  login.style.border = '1px solid #2a7ae4';
+  login.style.visibility = `visible`;
+  login.style.opacity = '1';
+  login.style.width = 'initial';
+
   if(isAuth === 'data-login'){
-    login.innerText = 'Login';
-    login.style.border = '1px solid #2a7ae4';
-    login.style.visibility = `visible`;
-    login.style.opacity = '1';
+    login.innerText = 'Login';    
     login.style.padding = '12px 47.5px';
-    login.style.width = 'initial';
   }else{
-    login.innerText = 'Menu administrador';
-    login.style.border = '1px solid #2a7ae4';
-    login.style.visibility = `visible`;
-    login.style.opacity = '1';
-    login.style.padding = '12px 1rem';
-    login.style.width = 'initial';
+    login.innerText = 'Menu administrador';      
+    login.style.padding = '12px 1rem';    
   }
 
   const logo = document.querySelector("[data-logo]");
