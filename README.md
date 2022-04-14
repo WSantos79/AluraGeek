@@ -12,6 +12,7 @@
  <a href="#heavy_check_mark-Descrição">Descrição</a> •
  <a href="#hammer-Tecnologias">Tecnologias</a> •
  <a href="#game_die-Rodando-localmente">Rodando projeto</a> •
+ <a href="#medal_sports-Badge">Badge</a> •	
  <a href="#smiley-autor">Autor</a>
 </p>
 
@@ -49,6 +50,21 @@ senha: Admin123
 + Clone este repositório.
 + Execute `npm install` para instalar as dependências.
 + Execute `npm run dev` para rodar o projeto.
+
+## :medal_sports: Badge
+           
+
+<table style="text-align: center;">
+  <tr>
+    <td>
+      <img height="150px" src="https://github.com/WSantos79/AluraGeek/blob/main/public/badges/participacao_v3.png?raw=true">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Participação</td>
+  </tr>
+</table>
+
 
 ## :smiley: Autor
 
