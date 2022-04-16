@@ -33,7 +33,7 @@ export default () => {
                     >
                       Ver tudo
                     </A>
-                    <img src={Right} />
+                    <img alt={`Ver toda a categoria de ${categoria.nome}`} src={Right} />
                   </VerTudo>
                 </Div>
                 <Categoria>
@@ -53,7 +53,7 @@ export default () => {
                               }}
                             >
                               <Link to={`/produto?${produto.nome.replace(/\s/g, '+').toLowerCase()}`}>
-                                <Foto src={produto.imagem}></Foto>
+                                <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} src={produto.imagem}></Foto>
                                 <NomeProduto>{produto.nome}</NomeProduto>
                                 <Valor>{produto.valor}</Valor>
                               </Link>

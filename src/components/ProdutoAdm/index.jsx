@@ -44,7 +44,7 @@ export default () => {
                   <ProdutoHome key={produto.id}>
                     <Imagem>
                       <FotoProduto
-                        alt={`Foto ilustrativa do produto ${produto.nome}`}
+                        alt={`Imagem ilustrativa do produto ${produto.nome}`}
                         src={produto.imagem}
                       />
                       <Delet

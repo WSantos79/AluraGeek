@@ -67,14 +67,14 @@ export default () => {
               showSearch(isAuth);
             }}
             src={search}
-            alt="Ícone para busca no site"
+            alt="Ícone para busca no site."
             />
           <IconCancel
             onClick={() => {
               disableSearch(isAuth);
             }}
             src={cancel}
-            alt=""
+            alt="Ícone para cancelar busca no site."
             data-cancel
             />
         </Header>
