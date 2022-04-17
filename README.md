@@ -1,4 +1,4 @@
-# <p align="center">:star: AluraGeek Challenge FrontEnd</p>
+# <p align="center">:star: AluraGeek - 3º Challenge FrontEnd</p>
 <div align="center">
  <img width="250" src="https://raw.githubusercontent.com/WSantos79/AluraGeek/6d8efb1f1654c48e1612b8c89dc05df7f02ae9dc/src/assets/images/logo.svg">
 </div>
@@ -21,12 +21,25 @@
 
 ## :heavy_check_mark: **Descrição**
 
-Em construção...
+Desafio de Front-End proposto pela Alura, com o intuito de aproximar os alunos do ambiente de trabalho, onde deve ser desenvolvido um projeto com base nos requisitos do trello e do figma.
 
-Para logar =>
+O projeto consiste em uma plataforma de e-commerce focado em produtos do universo geek, algumas funcionalidades da plataforma são:
 
-email: admin@gmail.com
-senha: Admin123
++ Validação de formulários
++ Autenticação de usuário
++ Listagem de produtos
++ Visualizar descrição de produto selecionado
++ Visualizar produtos por categorias
++ Busca de produtos
++ Cadastro de novos produtos :lock: (Admin)
++ Editar produtos :lock: (Admin)
++ Deletar produtos :lock: (Admin) 
++ “Fale Conosco” funcional, enviando e-mail com a mensagem e nome inseridos
+
+Para logar como administrador :point_down:
+
+:key: email: admin@gmail.com </br>
+:key: senha: Admin123
 
 
 ## :hammer: **Tecnologias**
