@@ -4,8 +4,9 @@ import Trash from "../../assets/images/trash.png";
 import Change from "../../assets/images/edit.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext, useRef } from "react";
-import { getAllProdudos, deleteProduto, getShowProduto } from "../../service/api";
+import { getAllProdudos, getShowProduto } from "../../service/api";
 import { ProdutoContext } from "../../common/context/produto";
+import { confirm } from "./func";
 
 export default () => {
   const [allProdutos, setAllProdutos] = useState('');
@@ -25,7 +26,7 @@ export default () => {
     navigate(`/produto/edit?${produto.nome.replace(/\s/g, '+').toLowerCase()}`);
   }
   }, [produto]);
-
+  
   return (
     <>
       <Section>
@@ -49,7 +50,7 @@ export default () => {
                       />
                       <Delet
                         onClick={() => {
-                          deleteProduto(produto.id, setUpdate);
+                          confirm(produto.id, setUpdate);
                         }}
                         alt="Ícone para deletar o produto."
                         src={Trash}

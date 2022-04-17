@@ -29,7 +29,7 @@ export default () => {
             <LastItem><Link href="#">Anuncie aqui</Link></LastItem>
           </ul>
 
-          <form onSubmit={Submit} novalidate>
+          <form onSubmit={Submit}>
             <Fieldset>
               <legend>Fale conosco</legend>
 

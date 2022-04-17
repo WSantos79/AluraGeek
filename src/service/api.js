@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from 'sweetalert2'
 
 const api = axios.create({
   baseURL: 'https://api-commerce-geek.herokuapp.com'
@@ -15,18 +16,28 @@ export const AddProduto = async (nome, valor, imagem, descricao, categoria) => {
     categoria_id: parseInt(categoria)
   })
   .then(function (response) {
-    alert('Produto adicionado com sucesso!');
+    Swal.fire({
+      icon: 'success',     
+      title: 'Produto adicionado com sucesso!',      
+      showConfirmButton: false,
+      timer: 1500
+    });
   })
   .catch(function (error) {
     console.error(error);
   });
 }
-
+ 
 // deletando produto
 export const deleteProduto = async (id, setUpdate) => {
   await api.delete(`/produtos/${id}`)
   .then(function (response) {
-    alert('Produto deletado com sucesso!');
+    Swal.fire({
+      icon: 'success',     
+      title: 'Produto deletado com sucesso!',      
+      showConfirmButton: false,
+      timer: 1500
+    });   
     setUpdate(id); // mudando stat para renderizar a pag
   })
   .catch(function (error) {
@@ -46,7 +57,12 @@ export const EditProduto = async (id, nome, valor, imagem, descricao, categoria,
     })
     .then(function (response) {
       setIsUpdate(true);
-      alert('Produto salvo com sucesso!');     
+      Swal.fire({
+        icon: 'success',     
+        title: 'Produto salvo com sucesso!',      
+        showConfirmButton: false,
+        timer: 1500
+      });
     })
     .catch(function (error) {
       alert.error(error);
@@ -60,7 +76,12 @@ export const EditProduto = async (id, nome, valor, imagem, descricao, categoria,
     })
     .then(function (response) {
       setIsUpdate(true);
-      alert('Produto salvo com sucesso!');      
+      Swal.fire({
+        icon: 'success',     
+        title: 'Produto salvo com sucesso!',      
+        showConfirmButton: false,
+        timer: 1500
+      });
     })
     .catch(function (error) {
       alert.error(error);
@@ -75,7 +96,12 @@ export const getLogin = async(email, senha, setIsLogged) => {
       if(response.data.length > 0){
         setIsLogged(true);
       }else{
-        alert('Usuário não encontrado!');
+        Swal.fire({    
+          icon: 'error',  
+          confirmButtonColor: '#2A7AE4',
+          title: 'Usuário e/ou senha incorretos!',
+          text: 'Tente novamente.'
+        });
       }      
     })
     .catch(function (error) {
@@ -172,19 +198,6 @@ export const getAllProdCateg = async (id, nome, setCategoria) => {
   await api.get(`/produtos/?categoria_id=${id}`)
     .then(function (response) {
       setCategoria([nome, response.data]);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-}
-
-export const testeDois = async () => {
-  await api.post('/categorias', {
-    id: 4,
-    nome: "testando POST"
-  })
-    .then(function (response) {
-      console.log(response);
     })
     .catch(function (error) {
       console.error(error);

@@ -56,7 +56,7 @@ export function validaContato() {
         nome.style.marginBottom = '1px';
     }else{
         nomeAlert.style.display = 'none';
-        nome.style.marginBottom = '1rem';
+        nome.style.marginBottom = '1rem';       
     }
     
     if(!msg.validity.valid){
