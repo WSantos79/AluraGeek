@@ -53,6 +53,7 @@ Para logar como administrador :point_down:
 <li>:small_blue_diamond: EmailJS API</li>
 <li>:small_blue_diamond: Cloudinary API</li>
 <li>:small_blue_diamond: JSON Server</li>
+<li>:small_blue_diamond: sweetalert2</li>
 <li>:small_blue_diamond: HTML</li>
 <li>:small_blue_diamond: CSS</li>
 </ul>
