@@ -34,7 +34,7 @@ O projeto consiste em uma plataforma de e-commerce focado em produtos do univers
 + Cadastro de novos produtos :lock: (Admin)
 + Editar produtos :lock: (Admin)
 + Deletar produtos :lock: (Admin) 
-+ “Fale Conosco” funcional, enviando e-mail com a mensagem e nome inseridos
++ “Fale Conosco” funcional (nome e mensagem é enviado para o meu e-mail)
 
 Para logar como administrador :point_down:
 
