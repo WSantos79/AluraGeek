@@ -32,7 +32,7 @@ export function selectFile(e, setFile){
   }else{
     alert.style.display = 'block';
     alert.previousElementSibling.style.marginBottom = '5px';
-    alert.textContent = 'Insira uma foto com o máximo de 200kb'
+    alert.textContent = 'Insira uma foto com o máximo de 1MB'
   }
 }
 
@@ -66,7 +66,7 @@ export function dropHandler(e, setFile) {
       }else {
         alert.style.display = 'block';
         alert.previousElementSibling.style.marginBottom = '5px';
-        alert.textContent = 'Insira uma foto com o máximo de 200kb'
+        alert.textContent = 'Insira uma foto com o máximo de 1MB'
       }
     }else {
       alert.style.display = 'block';
@@ -77,7 +77,7 @@ export function dropHandler(e, setFile) {
 }
 
 function fileSize(size) { // verificando o tamanho do arquivo
-  if(size < 205000) { // 200 kb
+  if(size < 1048576) { // 1 MB
     return true;
   }else{ 
     return false
