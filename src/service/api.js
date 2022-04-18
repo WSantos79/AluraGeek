@@ -112,11 +112,11 @@ export const getLogin = async(email, senha, setIsLogged) => {
 // funçao de busca de produtos por palavra
 export const getBusca = async(digitado, setProduto) => {
   await api.get(`/produtos?q=${digitado}`)
-    .then(function (response) {      
-      setProduto(response.data);      
+    .then(function (response) {     
+      setProduto(response.data); 
     })
     .catch(function (error) {
-      console.error(error);     
+      console.error(error);
     });
 }
 

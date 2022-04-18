@@ -5,7 +5,7 @@ ProdutoContext.displayName = "Ver Produto";
 
 export const ProdutoProvider = ({ children }) => {
   const [categoria, setCategoria] = useState('');
-  const [produto, setProduto] = useState('');
+  const [produto, setProduto] = useState(false);
   const [allCategorias, setAllCategorias] = useState('');
 
   return (

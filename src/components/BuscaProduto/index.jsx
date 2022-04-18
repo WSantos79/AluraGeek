@@ -9,11 +9,17 @@ export default () => {
  const { produto, setProduto } = useContext(ProdutoContext);
   return (
     <>
-      {!produto.length && (
+      {!produto && (
+          <>
+            <NotFound>Procurando produtos...</NotFound>          
+          </>
+      )}
+
+      {produto.length === 0 && (
           <>
             <NotFound>Não encontramos o produto que você procura :(</NotFound>          
           </>
-      )}
+      )}          
 
       {produto.length > 0 && (
           <Section>

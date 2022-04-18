@@ -46,9 +46,10 @@ export default () => {
                         alert.style.display = 'none';
                       },5000);
                     } else {
+                      setProduto(false);
                       getBusca(digitado, setProduto);
                       e.target.value = '';
-                      navigate(`/search`);               
+                      navigate(`/search`);       
                     }
                   } 
                 }}           

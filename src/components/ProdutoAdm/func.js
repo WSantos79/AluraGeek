@@ -7,8 +7,8 @@ export function confirm(id, setUpdate) {
         text: "Esta ação não poderá ser desfeita!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#2A7AE4',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#2A7AE4',
         confirmButtonText: 'Sim, deletar',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
