@@ -73,9 +73,13 @@ Para logar como administrador :point_down:
     <td>
       <img height="150px" src="https://github.com/WSantos79/AluraGeek/blob/main/public/badges/participacao_v3.png?raw=true">
     </td>
+   <td>
+      <img height="150px" src="https://github.com/WSantos79/AluraGeek/blob/main/public/badges/compartilhamento_Helper.png?raw=true">
+    </td>
   </tr>
   <tr>
     <td align="center">Participação</td>
+   <td align="center">Apoio à Comunidade</td>
   </tr>
 </table>
 
