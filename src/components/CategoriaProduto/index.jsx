@@ -7,7 +7,7 @@ import { getCategorias, getProdutosHome, getShowProduto, getAllProdCateg } from 
 
 export default () => {
   const [homeProdutos, setHomeProdutos] = useState('');
-
+  var TESTE = 'https://res.cloudinary.com/dm8dootbl/image/upload/v1650416447/samples/Console/six_dweakx.webp'
   const { setProduto, setCategoria, allCategorias, setAllCategorias } = useContext(ProdutoContext);
 
   useEffect(() => {
@@ -53,7 +53,9 @@ export default () => {
                               }}
                             >
                               <Link to={`/produto?${produto.nome.replace(/\s/g, '+').toLowerCase()}`}>
-                                <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} src={produto.imagem}></Foto>
+                                <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
+                                src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_300')}>
+                                </Foto>
                                 <NomeProduto>{produto.nome}</NomeProduto>
                                 <Valor>{produto.valor}</Valor>
                               </Link>
