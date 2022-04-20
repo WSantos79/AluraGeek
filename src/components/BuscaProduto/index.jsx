@@ -35,7 +35,9 @@ export default () => {
                         }}
                         >
                         <Link to={`/produto?${produto.nome.replace(/\s/g, '').toLowerCase()}`}>
-                        <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} src={produto.imagem}></Foto>
+                        <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
+                        src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_300')}>
+                        </Foto>
                         <NomeProduto>{produto.nome}</NomeProduto>
                         <Valor>{produto.valor}</Valor>
                         </Link>

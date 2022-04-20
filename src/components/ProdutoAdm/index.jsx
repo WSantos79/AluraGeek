@@ -46,7 +46,7 @@ export default () => {
                     <Imagem>
                       <FotoProduto
                         alt={`Imagem ilustrativa do produto ${produto.nome}`}
-                        src={produto.imagem}
+                        src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_300')}
                       />
                       <Delet
                         onClick={() => {
@@ -54,6 +54,7 @@ export default () => {
                         }}
                         alt="Ícone para deletar o produto."
                         src={Trash}
+                        width='18px'
                       ></Delet>
                      
                       <Edit
@@ -62,6 +63,7 @@ export default () => {
                         }}
                         alt="Ícone para editar o produto."
                         src={Change}
+                        width='18px'
                       ></Edit>
                       
                     </Imagem>

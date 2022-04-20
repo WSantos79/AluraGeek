@@ -24,7 +24,9 @@ export default () => {
     <>
       <Container>
         <ProdutoDestaq>
-          <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} src={produto.imagem}></Foto>
+          <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
+          src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_560')}>
+          </Foto>
           <Div>
             <Nome>{produto.nome}</Nome>
             <Preco>{produto.valor}</Preco>
@@ -50,7 +52,9 @@ export default () => {
                     }}
                   >
                     <A to={`#`}> 
-                      <FotoMenor alt={`Imagem ilustrativa do produto ${item.nome}`} src={item.imagem}></FotoMenor>
+                      <FotoMenor alt={`Imagem ilustrativa do produto ${item.nome}`} 
+                      src={item.imagem.replace('image/upload', 'image/upload/c_scale,w_300')}>
+                      </FotoMenor>
                       <NomeProduto>{item.nome}</NomeProduto>
                       <Valor>{item.valor}</Valor>
                     </A>

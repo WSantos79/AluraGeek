@@ -23,7 +23,7 @@ export default () => {
         <Header data-header>
           <Div>
             <Link to="/">
-              <Logo data-logo src={logo} alt="Logo do site Alura Geek"></Logo>
+              <Logo data-logo src={logo} alt="Logo do site Alura Geek" width='140px'></Logo>
             </Link> 
             <ContainerBusca> 
               <Busca
@@ -69,6 +69,7 @@ export default () => {
             }}
             src={search}
             alt="Ícone para busca no site."
+            width='20px'
             />
           <IconCancel
             onClick={() => {
@@ -76,6 +77,7 @@ export default () => {
             }}
             src={cancel}
             alt="Ícone para cancelar busca no site."
+            width='20px'
             data-cancel
             />
         </Header>

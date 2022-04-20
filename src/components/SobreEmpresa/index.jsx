@@ -19,7 +19,7 @@ export default () => {
       <Section>
         <Container>
           
-          <Logo src={logo} alt="Logo do site Alura Geek"></Logo>
+          <Logo src={logo} alt="Logo do site Alura Geek" width='140px'></Logo>
           <ul>
             <Item><Link href="#">Quem somos nós</Link></Item>
             <Item><Link href="#">Política de privacidade</Link></Item>

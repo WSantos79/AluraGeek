@@ -27,7 +27,9 @@ export default () => {
                     getShowProduto(item.id, setProduto);
                   }}>
                   <Link to={`/produto?${item.nome.replace(/\s/g, '+').toLowerCase()}`}>
-                    <Foto alt={`Imagem ilustrativa do produto ${item.nome}`} src={item.imagem}></Foto>
+                    <Foto alt={`Imagem ilustrativa do produto ${item.nome}`} 
+                    src={item.imagem.replace('image/upload', 'image/upload/c_scale,w_300')}>
+                    </Foto>
                     <NomeProduto>{item.nome}</NomeProduto>
                     <Valor>{item.valor}</Valor>
                   </Link>

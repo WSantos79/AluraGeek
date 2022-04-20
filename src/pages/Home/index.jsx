@@ -1,12 +1,12 @@
 import BannerPrincipal from "../../components/BannerPrincipal";
-import CategoriaProduto from "../../components/CategoriaProduto";
+import ProdutoHome from "../../components/ProdutoHome";
 
 
 export default () => {
   return (
     <>
       <BannerPrincipal />
-      <CategoriaProduto />      
+      <ProdutoHome />      
     </>
   );
 };
