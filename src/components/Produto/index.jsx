@@ -22,18 +22,20 @@ export default () => {
   
   return (
     <>
-      <Container>
-        <ProdutoDestaq>
-          <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
-          src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_560')}>
-          </Foto>
-          <Div>
-            <Nome>{produto.nome}</Nome>
-            <Preco>{produto.valor}</Preco>
-            <Descricao>{produto.descricao}</Descricao>
-          </Div>
-        </ProdutoDestaq>
-      </Container>
+      {produto && (
+         <Container>
+         <ProdutoDestaq>
+           <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
+           src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_560')}>
+           </Foto>
+           <Div>
+             <Nome>{produto.nome}</Nome>
+             <Preco>{produto.valor}</Preco>
+             <Descricao>{produto.descricao}</Descricao>
+           </Div>
+         </ProdutoDestaq>
+       </Container>
+      )}
 
       <Section>
         <DivCategoria>

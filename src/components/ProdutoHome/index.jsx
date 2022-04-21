@@ -7,7 +7,6 @@ import { getCategorias, getProdutosHome, getShowProduto, getAllProdCateg } from 
 
 export default () => {
   const [homeProdutos, setHomeProdutos] = useState('');
-  var TESTE = 'https://res.cloudinary.com/dm8dootbl/image/upload/v1650416447/samples/Console/six_dweakx.webp'
   const { setProduto, setCategoria, allCategorias, setAllCategorias } = useContext(ProdutoContext);
 
   useEffect(() => {
