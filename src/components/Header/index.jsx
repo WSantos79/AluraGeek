@@ -23,7 +23,7 @@ export default () => {
         <Header data-header>
           <Div>
             <Link to="/">
-              <Logo data-logo src={logo} alt="Logo do site Alura Geek" width='140px'></Logo>
+              <Logo data-logo src={logo} alt="Logo do site Alura Geek"></Logo>
             </Link> 
             <ContainerBusca> 
               <Busca
@@ -68,16 +68,14 @@ export default () => {
               showSearch(isAuth);
             }}
             src={search}
-            alt="Ícone para busca no site."
-            width='20px'
+            alt="Ícone para busca no site."            
             />
           <IconCancel
             onClick={() => {
               disableSearch(isAuth);
             }}
             src={cancel}
-            alt="Ícone para cancelar busca no site."
-            width='20px'
+            alt="Ícone para cancelar busca no site."           
             data-cancel
             />
         </Header>

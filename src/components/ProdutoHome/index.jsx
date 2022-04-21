@@ -33,7 +33,7 @@ export default () => {
                     >
                       Ver tudo
                     </A>
-                    <img alt={`Ver toda a categoria de ${categoria.nome}`} src={Right} width='16px'/>
+                    <img alt={`Ver toda a categoria de ${categoria.nome}`} src={Right}/>
                   </VerTudo>
                 </Div>
                 <Categoria>

@@ -190,7 +190,7 @@ export const Foto = styled.img`
   height: 174px;  
 `;
 
-export const NomeProduto = styled.h4`
+export const NomeProduto = styled.p`
   font-weight: 500;
   font-size: 14px;
   color: ${corTextoPrimario};
