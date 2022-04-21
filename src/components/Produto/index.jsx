@@ -22,7 +22,7 @@ export default () => {
   
   return (
     <>
-      {produto && (
+      {produto.nome && (
          <Container>
          <ProdutoDestaq>
            <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
