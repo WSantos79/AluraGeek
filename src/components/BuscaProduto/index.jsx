@@ -34,7 +34,7 @@ export default () => {
                         getShowProduto(produto.id, setProduto);
                         }}
                         >
-                        <Link to={`/produto?${produto.nome.replace(/\s/g, '').toLowerCase()}`}>
+                        <Link to={`/produto?${produto.nome.replace(/\s/g, '+').toLowerCase()}`}>
                         <Foto alt={`Imagem ilustrativa do produto ${produto.nome}`} 
                         src={produto.imagem.replace('image/upload', 'image/upload/c_scale,w_300')}>
                         </Foto>
@@ -42,7 +42,7 @@ export default () => {
                         <Valor>{produto.valor}</Valor>
                         </Link>
                         <VerProduto>
-                        <A to="/produto">Ver produto</A>
+                        <A to={`/produto?${produto.nome.replace(/\s/g, '+').toLowerCase()}`}>Ver produto</A>
                         </VerProduto>
                     </Produto>
                     );
