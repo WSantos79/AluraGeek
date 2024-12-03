@@ -2,7 +2,7 @@ import axios from "axios";
 import Swal from 'sweetalert2'
 
 const api = axios.create({
-  baseURL: 'https://api-commerce-geek.herokuapp.com'
+  baseURL: 'https://api-alurageek-geek.onrender.com'
 });
 
 
