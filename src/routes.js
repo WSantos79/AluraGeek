@@ -31,24 +31,24 @@ function Router() {
         <BrowserRouter history={history}>
             <GlobalStyle />
             <ProdutoProvider>
-            <AuthProvider> 
-            <Header/>              
-                <Routes>
-                    <Route path="*" element={<NotFound />} />
-                    <Route path="/" element={<Home />} />
-                    <Route path="/produto" element={<Produto />} />
-                    <Route path="/login" element={<Login />} />                    
-                    <Route path="/produtos/cat" element={<VerCategoria />} />
-                    <Route path="/search" element={<BuscaProduto/>} />
+                <AuthProvider> 
+                    <Header/>              
+                    <Routes>
+                        <Route path="*" element={<NotFound />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/produto" element={<Produto />} />
+                        <Route path="/login" element={<Login />} />                    
+                        <Route path="/produtos/cat" element={<VerCategoria />} />
+                        <Route path="/search" element={<BuscaProduto/>} />
 
-                    <Route path="/produto/add" element={ <PrivateRoute> <AddProduto /> </PrivateRoute>  } />
-                    <Route path="/produto/edit" element={ <PrivateRoute> <EditProduto /> </PrivateRoute> } />
-                    <Route path="/produto/home" element={ <PrivateRoute> <ProdutoAdm /> </PrivateRoute> } />
-                </Routes> 
+                        <Route path="/produto/add" element={ <PrivateRoute> <AddProduto /> </PrivateRoute>  } />
+                        <Route path="/produto/edit" element={ <PrivateRoute> <EditProduto /> </PrivateRoute> } />
+                        <Route path="/produto/home" element={ <PrivateRoute> <ProdutoAdm /> </PrivateRoute> } />
+                    </Routes> 
                 </AuthProvider>
             </ProdutoProvider>
             <SobreEmpresa/>
-            <Footer/>                   
+            <Footer/>    
         </BrowserRouter >
     );
 }

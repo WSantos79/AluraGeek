@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "react-scripts start",
-    "start": "node ./server.js",
+    "start": "json-server --watch db.json --port 3001",
     "build": "CI=False && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
