@@ -1,3 +1,4 @@
+// esse codigo é responsavel por simular uma api com o arquivo db.json
 const jsonServer = require('json-server');
 
 const server = jsonServer.create();

@@ -45,8 +45,8 @@ export default () => {
               data-pass="senha"
               type="password"
               required
-              placeholder="Escreva sua senha"
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
+              placeholder="Escreva sua senha"             
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+]).{6,12}$"
               title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos."
               onChange={(e) => {setSenha(e.target.value);}}
             ></Input>

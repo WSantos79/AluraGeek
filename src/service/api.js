@@ -85,6 +85,9 @@ export const EditProduto = async (id, nome, valor, imagem, descricao, categoria,
     })
     .catch(function (error) {
       alert.error(error);
+      console.log(alert.error(error))
+      console.log(error)
+      
     });
   }
 }
@@ -106,6 +109,7 @@ export const getLogin = async(email, senha, setIsLogged) => {
     })
     .catch(function (error) {
       console.error(error);
+      console.log(error)
     });
 }
 
